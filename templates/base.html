@@ -10,5 +10,19 @@
     
     <h1> My Medication List</h1>
     
+    
+    {% for med in Monday %}
+    {{med.Day}}
+    {{med.Medication_Name}}
+    {{med.Generic_Name}}
+    {{med.Strength}}
+    {{med.Dose}}
+    {{med.form}}
+    {{med.Physician}}
+    {{med.Date_prescribed}}
+    {{med.Duration}}
+    {{med.course_completed}}
+    {% endfor %}
+    
 </body>
 </html>

@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+{% block content %}
+    
+    <h1> My Medication List</h1>
+    
+     
+    
+    
+   
+    
+    
+<ul class="collapsible popout">
+    {% for med in categories %}
+    
+    <li>
+        <div class="collapsible-header"><i class="material-icons">expand_more</i> {{med.category_name}} - {{med.Medication_Name}} 
+        </div>
+        <div class="collapsible-body">
+            <span> 
+                {{med.Generic_Name}} 
+                {{med.Dose}}
+                {{med.form}}
+                {{med.route}}
+                <hr>
+                {{med.Physician}}
+                {{med.Date_prescribed}}
+                <hr>
+                {{med.Duration}}
+                <hr>
+                {{med.course_completed}}
+            </span>
+        </div>
+    </li>
+  
+    
+    {% endfor %}
+
+</ul>
+        
+{% endblock %}
+    

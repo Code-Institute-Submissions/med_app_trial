@@ -22,12 +22,29 @@ def get_category_names():
 
 
 @app.route('/')
-def get_meds():
-    Monday=mongo.db.Monday.find()
+def show_meds():
+    categories=mongo.db.categories.find()
     
-    return render_template("base.html", Monday= Monday)
+    return render_template("showmeds.html", categories= categories)
     
     
+    
+    
+    
+@app.route("/add_medication", methods=["GET", "POST"])
+def add_meds():
+    if request.method=="POST":
+        form_values = request.form.to_dict()
+        category = form_values["category_name"]
+        mongo.db[category].insert_one(form_values)
+        return redirect("/")
+    else:
+        categories = []
+        for category in mongo.db.collection_names():
+            if not category.startswith("system."):
+                categories.append(category)
+        
+        return render_template("add_medication.html", categories=categories)
 
 
 

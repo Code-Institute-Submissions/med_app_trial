@@ -10,10 +10,10 @@
     
     
 <ul class="collapsible popout">
-    {% for med in categories %}
+    {% for med in meds %}
     
     <li>
-        <div class="collapsible-header"><i class="material-icons">expand_more</i> {{med.category_name}} - {{med.Medication_Name}} 
+        <div class="collapsible-header"><i class="material-icons">expand_more</i> {{med.Medication_Name}} 
         </div>
         <div class="collapsible-body">
             <span> 
@@ -22,12 +22,19 @@
                 {{med.form}}
                 {{med.route}}
                 <hr>
+                {{med.Morning}}
+                {{med.Midday}}
+                {{med.Afternoon}}
+                {{med.Night}}
+                
+                <hr>
                 {{med.Physician}}
-                {{med.Date_prescribed}}
+                {{med.Date_prescribed}} - {{med.Date_discontinued}}
+                
                 <hr>
-                {{med.Duration}}
-                <hr>
-                {{med.course_completed}}
+                
+               
+                
             </span>
         </div>
     </li>

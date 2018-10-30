@@ -21,12 +21,14 @@ def get_category_names():
     return categories
 
 
-@app.route('/')
-def show_meds():
-    categories=mongo.db.categories.find()
+
     
-    return render_template("showmeds.html", categories= categories)
+@app.route("/meds")
+def get_meds():
+    meds = mongo.db["Medications"].find()
     
+    return render_template("meds.html", meds=meds)
+
     
     
     
@@ -37,7 +39,7 @@ def add_meds():
         form_values = request.form.to_dict()
         category = form_values["category_name"]
         mongo.db[category].insert_one(form_values)
-        return redirect("/")
+        return redirect("/meds")
     else:
         categories = []
         for category in mongo.db.collection_names():

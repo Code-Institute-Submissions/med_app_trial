@@ -11,6 +11,24 @@
     <title>Document</title>
 </head>
 <body>
+        <header>
+        <nav>
+            <div class="nav-wrapper">
+                <a href="{{url_for('get_meds')}}" class="brand-logo">Medication Calendar</a>
+                <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+                <ul id="nav-mobile" class="right hide-on-med-and-down">
+                    <li><a href="{{ url_for('get_meds') }}">Home</a></li>
+                    <li><a href="{{ url_for('add_meds') }}">New Medication</a></li>
+                    <li><a href="">Edit Medications</a></li>
+                </ul>
+                <ul class="side-nav" id="mobile-demo">
+                    <li><a href="{{ url_for('get_meds') }}">Home</a></li>
+                    <li><a href="{{ url_for('add_meds') }}">New Medication</a></li>
+                    <li><a href="">Edit Medications</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
     
     {% block content %}
     {% endblock %}
@@ -44,6 +62,9 @@ $('.timepicker').pickatime({
   autoclose: false,
   vibrate: true 
 });
+
+$('select').formSelect('methodName');
+    $('select').formSelect('methodName', paramName);
           
         
     </script>

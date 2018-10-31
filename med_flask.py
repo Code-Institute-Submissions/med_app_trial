@@ -8,7 +8,7 @@ app = Flask(__name__)
 
 app.config["MONGO_DBNAME"] = os.environ.get("MONGO_DBNAME")
 app.config["MONGO_URI"] = os.environ.get("MONGO_URI")
-COLLECTION_NAME = "Meds"
+COLLECTION_NAME = "Medications"
 
 mongo = PyMongo(app)
 
@@ -37,16 +37,42 @@ def get_meds():
 def add_meds():
     if request.method=="POST":
         form_values = request.form.to_dict()
-        category = form_values["category_name"]
-        mongo.db[category].insert_one(form_values)
-        return redirect("/meds")
-    else:
-        categories = []
-        for category in mongo.db.collection_names():
-            if not category.startswith("system."):
-                categories.append(category)
+        form_values["Day"]= request.form.getlist("Day")
+        form_values["Time"]= request.form.getlist("Time")
         
-        return render_template("add_medication.html", categories=categories)
+        mongo.db["Medications"].insert_one(form_values)
+        return redirect(url_for("get_meds"))
+    else:
+        
+        
+        return render_template("add_medication.html")
+        
+        
+        
+        
+@app.route("/meds/<med_id>/delete", methods=["POST"])
+def delete_med():
+    med_id = request.form['med_id']
+    mongo.db["Medications"].remove({"_id":ObjectId(med_id)})
+    return redirect(url_for("get_meds"))
+    
+    
+    
+@app.route('/meds/Medications/<med_id>/edit', methods=["GET", "POST"])
+def edit_med(med_id):
+    if request.method=="POST":
+        form_values = request.form.to_dict()
+        form_values["Day"]= request.form.getlist("Day")
+        form_values["Time"]= request.form.getlist("Time")
+        
+        
+        mongo.db["Medications"].update({"_id": ObjectId(med_id)}, form_values)
+        
+        the_med =  mongo.db["Medications"].find_one({"_id": ObjectId(med_id)})
+        
+        return render_template('editmed.html', med=the_med)
+
+
 
 
 

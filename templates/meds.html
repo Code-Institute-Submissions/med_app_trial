@@ -20,7 +20,11 @@
                 {{med.Generic_Name}} 
                 {{med.Dose}}
                 {{med.form}}
-                {{med.route}}
+                {{med.Route}}
+                {% for d in med.Day%}
+                {{d }}
+                {% endfor %}
+                
                 <hr>
                 {{med.Morning}}
                 {{med.Midday}}

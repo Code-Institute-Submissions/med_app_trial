@@ -1,0 +1,73 @@
+{% extends "base.html" %}
+{% block content %}
+
+<h3>Edit Medication</h3>
+
+<div class="row">
+  <form method="POST" class="col s12">
+   
+   
+
+    <div class="row">
+      <div class="input-field col s12">
+        <i class="material-icons prefix">assignment</i>
+        <input id="Medication_Name" name="Medication_Name" type="text" class="validate" value="{{ med.Medication_Name}}">
+        <label for="icon_prefix">Medication_Name</label>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="input-field col s12">
+        <i class="material-icons prefix">subject</i>
+        <textarea name="task_description" id="task_description" class="materialize-textarea">{{ task.task_description }}</textarea>
+        <label for="icon_telephone">Task Description</label>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="input-field col s12">
+        <i class="material-icons prefix">today</i>
+        <input type="text" id="due_date" name="due_date" class="datepicker" value="{{ task.duedate }}">
+        <label for="icon_prefix">Due Date</label>
+      </div>
+    </div>
+
+
+   <div class="row">
+      <p>
+          <input id="id_day_monday" type="checkbox" name="Day" value="Monday"
+            {% if "Monday" in med.Day %}checked{% endif %}
+          />
+          <label for="id_day_monday">Monday</label>
+      </p>
+      <p>
+          <input id="id_colour_yellow" type="checkbox" name="colour" value="yellow" 
+            {% if "yellow" in task.colour %}checked{% endif %}
+          />
+          <label for="id_colour_yellow">Yellow</label>
+      </p>
+      <p>
+          <input id="id_colour_green" type="checkbox" name="colour" value="green" 
+            {% if "green" in task.colour %}checked{% endif %}
+          />
+          <label for="id_colour_green">Green</label>
+      </p>
+    </div>
+
+
+    <button class="btn waves-effect waves-light" type="submit">Save
+      <i class="material-icons right">playlist_add</i>
+    </button>
+  </form>
+</div>
+
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+<script type="text/javascript">
+    $(document).ready(function() {
+        due_date = Date.parse('{{task.due_date}}');
+        $('#due_date').pickadate('picker').set('select', due_date, {format: "dd/mm/yyyy"}).trigger('change');
+    });    
+</script>
+
+{% endblock %}

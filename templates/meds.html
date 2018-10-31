@@ -1,45 +1,68 @@
 {% extends 'base.html' %}
 {% block content %}
     
-    <h1> My Medication List</h1>
+    <h2> Medication List</h2>
     
-     
-    
-    
+       
    
-    
-    
+  
 <ul class="collapsible popout">
     {% for med in meds %}
     
     <li>
         <div class="collapsible-header"><i class="material-icons">expand_more</i> {{med.Medication_Name}} 
+        <a href="{{ url_for('editmed', med_id = med._id) }}" class="waves-effect waves-teal btn-flat">Edit</a> 
+        <a href="{{ url_for('delete_med', med_id = med._id) }}" class="waves-effect waves-teal btn-flat">Delete</a>
+        
         </div>
+       
+        
+        
+        
         <div class="collapsible-body">
             <span> 
-                {{med.Generic_Name}} 
+                Generic Name: 
+                {{med.Generic_Name}}
+                <hr>
+                Dose:
                 {{med.Dose}}
-                {{med.form}}
+                
                 {{med.Route}}
+                <hr>
+                Take {{med.Medication_Name}} on these Days: 
                 {% for d in med.Day%}
-                {{d }}
+                {{d }},
+                {% endfor %}
+                <hr>
+               
+                Take {{med.Medication_Name}} at these times each day:
+                {% for t in med.Time%}
+                {{t}},
                 {% endfor %}
                 
-                <hr>
-                {{med.Morning}}
-                {{med.Midday}}
-                {{med.Afternoon}}
-                {{med.Night}}
-                
-                <hr>
-                {{med.Physician}}
-                {{med.Date_prescribed}} - {{med.Date_discontinued}}
-                
-                <hr>
                 
                
                 
+                
+                <hr>
+                Prescribed by:
+                {{med.Physician}}
+                
+                <hr>
+                Date prescribed:
+                {{med.Date_prescribed}} 
+                
+                <hr>
+                Expiry Date:
+                {{med.Date_discontinued}}
+                
+                <hr>
+                
+                <a href = "{{url_for ('editmed', med_id = med._id )}}">Edit</a>
+               
+                
             </span>
+            
         </div>
     </li>
   

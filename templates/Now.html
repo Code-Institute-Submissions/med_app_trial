@@ -1,8 +1,12 @@
 {% extends "base.html" %} {% block content %}
 
 
-<h3>Current Medications</h3>
+<h3>It's {{day}} {{time_of_day}} </h3>
+<h4>{{date}}</h4>
 
+{% for med in meds %}
+{{med.Medication_Name}}
+{% endfor %}
 
 
 

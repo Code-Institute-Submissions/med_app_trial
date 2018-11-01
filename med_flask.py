@@ -2,6 +2,8 @@ from flask import Flask, render_template, request, redirect, url_for
 import os
 from flask_pymongo import PyMongo
 from bson.objectid import ObjectId
+import datetime
+import calendar
 
 app = Flask(__name__)
 
@@ -13,13 +15,43 @@ COLLECTION_NAME = "Medications"
 mongo = PyMongo(app)
 
 
+
+    
+    
+       
+    
+  
+
 def get_category_names():
     categories = []
     for category in mongo.db.collection_names():
         if not category.startswith("system."):
             categories.append(category)
     return categories
+    
+def get_date():
+    now=datetime.datetime.now()
+    return (now.strftime("%Y-%m-%d %H:%M:%S"))
 
+
+def get_today():
+    t = datetime.datetime.today()
+    return calendar.day_name[t.weekday()]
+
+    
+def get_time_of_day():
+    t = datetime.datetime.today()
+    h= t.hour
+    if h<=11 and h>=0:
+        return "Morning"
+    if h>11 and h<=14:
+        return "Afternoon"
+    if h>14 and h<=18:
+        return "Evening"
+    else:
+            return "Night"
+    
+    
 
 
     
@@ -77,15 +109,36 @@ def editmed(med_id):
         
         return render_template('editmed.html', med=the_med)
         
-@app.route('/day')
-def get_med_by_day():
-    return render_template("day.html")
+@app.route('/week')
+def get_meds_for_week():
+    meds = mongo.db["Medications"].find()
+    days=['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday']
+    weekly = {}
+    for day in days:
+        weekly[day] = {
+            "Morning" : [i['Medication_Name'] for i in mongo.db.Medications.find({"Day": day, "Time": "Morning" })],
+            "Afternoon" : [i['Medication_Name'] for i in mongo.db.Medications.find({"Day": day, "Time": "Afternoon" })],
+            "Evening" : [i['Medication_Name'] for i in mongo.db.Medications.find({"Day": day, "Time": "Evening" })],
+            "Night" : [i['Medication_Name'] for i in mongo.db.Medications.find({"Day": day, "Time": "Night" })],
+        }
+    print(weekly)
+    
+    return render_template("week.html", weekly=weekly )
     
     
         
 @app.route('/now')
 def current_meds():
-    return render_template("Now.html")
+    day = get_today()
+    time_of_day = get_time_of_day()
+    meds = mongo.db.Medications.find({"Day": day, "Time": time_of_day })
+    return render_template("Now.html", day=day, time_of_day=time_of_day, date= get_date(), meds=meds)
+    
+
+
+
+    
+    
 
 
 

@@ -7,12 +7,14 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.2/css/all.css" integrity="sha384-/rXc/GQVaYpyDdyxK+ecHPVYJSN9bmVFBvjA/9eOB+pb3F2w2N6fc5qB9Ew5yIns" crossorigin="anonymous">
+    <link rel="stylesheet" href="{{url_for('static', filename='css/style.css')}}" type="text/css" />
     
     <title>Document</title>
 </head>
 <body>
+
         <header>
-        <nav>
+        <nav class = "nav">
             <div class="nav-wrapper">
                 <a href="{{url_for('get_meds')}}" class="brand-logo">Medication Manager</a>
                 <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
@@ -29,6 +31,9 @@
             </div>
         </nav>
     </header>
+    <div id="bg">
+  <img src="static/images/pills.jpg" alt="">
+</div>
     
     {% block content %}
     {% endblock %}

@@ -15,13 +15,8 @@ COLLECTION_NAME = "Medications"
 mongo = PyMongo(app)
 
 
-
     
     
-       
-    
-  
-
 def get_category_names():
     categories = []
     for category in mongo.db.collection_names():
@@ -46,7 +41,7 @@ def get_time_of_day():
         return "Morning"
     if h>11 and h<=14:
         return "Afternoon"
-    if h>14 and h<=18:
+    if h>15 and h<=18:
         return "Evening"
     else:
             return "Night"

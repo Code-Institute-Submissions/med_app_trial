@@ -1,10 +1,14 @@
 {% extends "base.html" %} {% block content %}
 
 <div class = 'row'>
+    
     {% for key in ('Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday') %}
         {% if key in weekly %}
-        <div class = "col s12, m1.5">
-            <a href="#"><h4>{{key}}</h4></a>
+        <div class = "col s12, m1.5" >
+        
+            
+            <a href="#"><h4 class = "tt">{{key}}</h4></a>
+            <hr>
                 
                     <p>Morning :</p>
                     {% for i in weekly[key]['Morning'] %}
@@ -27,5 +31,7 @@
         </div>
         {% endif %}
     {% endfor %}
+   
+
     
 {% endblock %}

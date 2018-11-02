@@ -1,20 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.2/css/all.css" integrity="sha384-/rXc/GQVaYpyDdyxK+ecHPVYJSN9bmVFBvjA/9eOB+pb3F2w2N6fc5qB9Ew5yIns" crossorigin="anonymous">
     <link rel="stylesheet" href="{{url_for('static', filename='css/style.css')}}" type="text/css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.2/css/all.css" integrity="sha384-/rXc/GQVaYpyDdyxK+ecHPVYJSN9bmVFBvjA/9eOB+pb3F2w2N6fc5qB9Ew5yIns" crossorigin="anonymous">
     
+
+
     <title>Document</title>
 </head>
+
 <body>
 
-        <header>
-        <nav class = "nav">
+
+    <header>
+        <nav class="nav">
             <div class="nav-wrapper">
                 <a href="{{url_for('get_meds')}}" class="brand-logo">Medication Manager</a>
                 <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
@@ -30,23 +36,36 @@
                 </ul>
             </div>
         </nav>
+        <div class="container">
     </header>
-    <div id="bg">
-  <img src="static/images/pills.jpg" alt="">
-</div>
-    
-    {% block content %}
-    {% endblock %}
-    
-    
+
+
+    {% block content %} {% endblock %}
+
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script type="text/javascript">
- $(document).ready(function(){
- $('.collapsible').collapsible();
-  });
-  
-  $('.datepicker').pickadate({
+    
+ 
+    
+   $(document).ready(function(){
+    $("#hide").click(function(){
+        $(".test").hide();
+    });
+    $("#show").click(function(){
+        $(".test").show();
+    });
+});
+        $(document).ready(function() {
+            $('.collapsible').collapsible();
+            $('select').material_select();
+            $(".button-collapse").sideNav();
+        });
+
+
+        $('.datepicker').pickadate({
             selectMonths: true, // Creates a dropdown to control month
             selectYears: 15, // Creates a dropdown of 15 years to control year,
             today: 'Today',
@@ -54,25 +73,31 @@
             close: 'Ok',
             closeOnSelect: false // Close upon selecting a date,
         });
-        
- $(document).ready(function() {
-            $('select').material_select();
-         });
-        
-     
-$('.timepicker').pickatime({
-    default: 'now',
-    twelvehour: false,
-    donetext: 'OK',
-  autoclose: false,
-  vibrate: true 
-});
 
-$('select').formSelect('methodName');
-    $('select').formSelect('methodName', paramName);
-          
-        
+        $(document).ready(function() {
+            $('select').material_select();
+        });
+
+
+        $('.timepicker').pickatime({
+            default: 'now',
+            twelvehour: false,
+            donetext: 'OK',
+            autoclose: false,
+            vibrate: true
+        });
+
+        $('select').formSelect('methodName');
+        $('select').formSelect('methodName', paramName);
+
+        $(document).ready(function() {
+            $('.sidenav').sidenav();
+        });
+
+
     </script>
-    
+    </div>
+
 </body>
+
 </html>

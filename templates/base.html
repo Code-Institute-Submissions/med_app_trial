@@ -23,12 +23,12 @@
     <header>
         <nav class="nav">
             <div class="nav-wrapper">
-                <a href="{{url_for('get_meds')}}" class="brand-logo">Medication Manager</a>
+                <a href="{{url_for('get_meds')}}" class="brand-logo">&nbsp &nbspMed Manager</a>
                 <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
                 <ul id="nav-mobile" class="right hide-on-med-and-down">
-                    <li><a href="{{ url_for('get_meds') }}">Home</a></li>
-                    <li><a href="{{ url_for('add_meds') }}">New Medication</a></li>
-                    <li><a href="">Edit Medications</a></li>
+                    <li><a href="{{ url_for('current_meds') }}">Now</a></li>
+                    <li><a href="{{ url_for('add_meds') }}">Add Medication</a></li>
+                    <li><a href="{{ url_for('get_meds') }}">Edit Medications</a></li>
                 </ul>
                 <ul class="side-nav" id="mobile-demo">
                     <li><a href="{{ url_for('get_meds') }}">Home</a></li>
@@ -87,6 +87,9 @@
         $(document).ready(function() {
             $('.sidenav').sidenav();
         });
+       $(document).ready(function(){
+  $('.parallax').parallax();
+});
     </script>
     
 

@@ -145,6 +145,9 @@ def trial():
     print(weekly)
     return render_template("trial.html",weekly=weekly)
 
+@app.route('/home')
+def get_home():
+    return render_template('home.html')
     
     
 

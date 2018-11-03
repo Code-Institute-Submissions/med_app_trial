@@ -1,3 +1,25 @@
+ nav ul a{
+     background-color: transparent;
+      color:#45bbf6;
+      font-size: 2rem;
+     
+ }
+ 
+ nav .brand-logo{
+      font-family: 'Anton', sans-serif;
+      color:#45bbf6;
+      background-color: transparent;
+      font-size: 3rem;
+      
+}
+
+nav{
+     background-color: white;
+}
+ 
+ 
+ 
+ 
  .row{
     text-align: center;
 }
@@ -20,9 +42,7 @@ body{
          background-repeat: no-repeat;
 }
 
-.brand-logo{
-      font-family: 'Anton', sans-serif;
-}
+
 
 
 
@@ -32,6 +52,48 @@ body{
 
 /*add_medication*/
 
+ 
 [type="checkbox"]+label {
     font-size: 2rem;
+}
+
+/*Home_____________*/
+
+.container-home{
+    background-color: white;
+}
+
+
+.parallax-container {
+     background-image: url("https://images.pexels.com/photos/1389104/pexels-photo-1389104.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
+     width: 100vw;
+     height: 100vh;
+     
+     
+     
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+         background-repeat: no-repeat;
+    
+}
+
+.parallax-container {
+  height: 500px;
+}
+
+.parallax-container2{
+     background-image: url("https://images.pexels.com/photos/432722/pexels-photo-432722.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
+     width: 100vw;
+     height: 100vh;
+     
+     
+     
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+         background-repeat: no-repeat;
+    
 }

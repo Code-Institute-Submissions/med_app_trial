@@ -1,3 +1,4 @@
+<!
 <!DOCTYPE html>
 <html lang="en">
 
@@ -14,7 +15,7 @@
 
 
     <title>Document</title>
-</head>
+</head meta name="viewport" content="width=device-width, initial-scale=1.0" >
 
 <body>
 
@@ -36,7 +37,7 @@
                 </ul>
             </div>
         </nav>
-        <div class="container">
+        
     </header>
 
 
@@ -63,8 +64,6 @@
             $('select').material_select();
             $(".button-collapse").sideNav();
         });
-
-
         $('.datepicker').pickadate({
             selectMonths: true, // Creates a dropdown to control month
             selectYears: 15, // Creates a dropdown of 15 years to control year,
@@ -73,12 +72,9 @@
             close: 'Ok',
             closeOnSelect: false // Close upon selecting a date,
         });
-
         $(document).ready(function() {
             $('select').material_select();
         });
-
-
         $('.timepicker').pickatime({
             default: 'now',
             twelvehour: false,
@@ -86,17 +82,13 @@
             autoclose: false,
             vibrate: true
         });
-
         $('select').formSelect('methodName');
         $('select').formSelect('methodName', paramName);
-
         $(document).ready(function() {
             $('.sidenav').sidenav();
         });
-
-
     </script>
-    </div>
+    
 
 </body>
 

@@ -1,0 +1,95 @@
+{% extends "base.html" %} {% block content %}
+
+<div class = 'row'>
+    <div class= "col m1.7"><h4>Time</h4></div>
+ 
+    
+    {% for key in ('Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday') %}
+        {% if key in weekly %}
+       
+        
+            
+         <div class = "col s12, m1.3" >    <a href="#"><h4 >{{key}}</h4></a></div>
+           
+                {% endif %}
+    {% endfor %}
+    
+      </div>
+       <hr>
+    <div class = 'row'>
+        <div class= "col m1.7"><h5>Morning</h5></div>
+        
+    
+        <div class = "col s12, m1.7" >  
+
+                
+                    
+                    {% for i in weekly['Monday']['Morning'] %}
+                      <h6> {{i}}</h6>
+                         
+                    {% endfor %}
+                    </div>
+                    
+                    
+      
+                  
+            <div class = "col s12, m1.7" > 
+                    
+                    {% for i in weekly['Tuesday']['Morning'] %}
+                        <h6>{{i}}</h6>
+                        
+                    {% endfor %}
+               </div> 
+               
+                    
+            <div class = "col s12, m1.7" >       
+                    
+                    {% for i in weekly['Wednesday']['Morning'] %}
+                        <h6>{{i}}</h6>
+                        
+                    {% endfor %}
+             </div> 
+             <hr>
+                    
+                    <div class = "col s12, m1.7" >       
+                    
+                    {% for i in weekly['Thursday']['Morning'] %}
+                        <h6>{{i}}</h6>
+                        
+                    {% endfor %}
+             </div> 
+             <hr>
+              <div class = "col s12, m1.7" >       
+                    
+                    {% for i in weekly['Friday']['Morning'] %}
+                        <h6>{{i}}</h6>
+                        
+                    {% endfor %}
+             </div>
+             <hr>
+              <div class = "col s12, m1.7" >       
+                    
+                    {% for i in weekly['Saturday']['Morning'] %}
+                        <h6>{{i}}</h6>
+                        
+                    {% endfor %}
+             </div> 
+             <hr>
+              <div class = "col s12, m1.7" >       
+                    
+                    {% for i in weekly['Sunday']['Morning'] %}
+                        <h6>{{i}}</h6>
+                        
+                    {% endfor %}
+             </div>       
+                    
+                       
+            
+        
+</div>
+        
+    
+   
+
+    
+{% endblock %}

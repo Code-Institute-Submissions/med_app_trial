@@ -130,7 +130,20 @@ def current_meds():
     return render_template("Now.html", day=day, time_of_day=time_of_day, date= get_date(), meds=meds)
     
 
-
+@app.route('/trial')
+def trial():
+    meds = mongo.db["Medications"].find()
+    days=['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday']
+    weekly = {}
+    for day in days:
+        weekly[day] = {
+            "Morning" : [i['Medication_Name'] for i in mongo.db.Medications.find({"Day": day, "Time": "Morning" })],
+            "Afternoon" : [i['Medication_Name'] for i in mongo.db.Medications.find({"Day": day, "Time": "Afternoon" })],
+            "Evening" : [i['Medication_Name'] for i in mongo.db.Medications.find({"Day": day, "Time": "Evening" })],
+            "Night" : [i['Medication_Name'] for i in mongo.db.Medications.find({"Day": day, "Time": "Night" })],
+        }
+    print(weekly)
+    return render_template("trial.html",weekly=weekly)
 
     
     

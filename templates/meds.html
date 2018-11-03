@@ -1,41 +1,49 @@
-{% extends 'base.html' %}
-{% block content %}
-    
-    <h2> Medication List</h2>
-    
-       
-   
-  
-<ul class="collapsible popout">
-    {% for med in meds %}
-    
-    <li>
-        <div class="collapsible-header"><i class="material-icons">expand_more</i> {{med.Medication_Name}} 
-        <a href="{{ url_for('editmed', med_id = med._id) }}" class="waves-effect waves-teal btn-flat">Edit</a> 
-        <a href="{{ url_for('delete_med', med_id = med._id) }}" class="waves-effect waves-teal btn-flat">Delete</a>
-        
+{% extends 'base.html' %} {% block content %}
+<div class='container'>
+    <div class='row'>
+        <div class='col s12'>
+
+            <h2> Medication List</h2> 
         </div>
-       
-        
-        
-        
-        <div class="collapsible-body">
-            <span> 
-                Generic Name: 
+    </div>
+
+
+    <div clas='row'>
+        <div class='col s12'>
+            <ul class="collapsible popout">
+                {% for med in meds %}
+
+                <li class="med_list">
+                    <div class="collapsible-header"><i class="material-icons">expand_more</i>
+                        <h5><b>{{med.Medication_Name}}</b> </h5>
+                        <section>&nbsp &nbsp &nbsp</section>
+
+                        <a class="valign-wrapper" href="{{ url_for('editmed', med_id = med._id) }}" class="waves-effect waves-teal btn-flat">Edit</a>
+                        <section>&nbsp &nbsp &nbsp</section>
+                        <a class="valign-wrapper" href="{{ url_for('delete_med', med_id = med._id) }}" class="waves-effect waves-teal btn-flat">Delete</a>
+
+                    </div>
+
+
+
+
+                    <div class="collapsible-body">
+                        <span> 
+                <b>Generic Name: </b>
                 {{med.Generic_Name}}
                 <hr>
-                Dose:
+               <b> Dose:</b>
                 {{med.Dose}}
                 
                 {{med.Route}}
                 <hr>
-                Take {{med.Medication_Name}} on these Days: 
+               <b> Take {{med.Medication_Name}} on these Days: </b>
                 {% for d in med.Day%}
                 {{d }},
                 {% endfor %}
                 <hr>
                
-                Take {{med.Medication_Name}} at these times each day:
+              <b>  Take {{med.Medication_Name}} at these times each day:</b>
                 {% for t in med.Time%}
                 {{t}},
                 {% endfor %}
@@ -45,31 +53,38 @@
                 
                 
                 <hr>
-                Prescribed by:
+              <b>  Prescribed by:</b>
                 {{med.Physician}}
                 
                 <hr>
-                Date prescribed:
+              <b>  Date prescribed:</b>
                 {{med.Date_prescribed}} 
                 
                 <hr>
-                Expiry Date:
+               <b> Expiry Date:</b>
                 {{med.Date_discontinued}}
                 
-                <hr>
-                
-                <a href = "{{url_for ('editmed', med_id = med._id )}}">Edit</a>
                
                 
             </span>
-            
-        </div>
-    </li>
-  
-    
-    {% endfor %}
 
-</ul>
-        
+                    </div>
+                </li>
+
+
+                {% endfor %}
+
+
+            </ul>
+        </div>
+    </div>
+    <div class='row'>
+        <div class='col s12 right-align'>
+            <a class="btn-floating btn-large waves-effect waves-light red" href="{{ url_for('add_meds') }}"><i class="material-icons">add</i></a>
+
+        </div>
+    </div>
+
+</div>
+
 {% endblock %}
-    

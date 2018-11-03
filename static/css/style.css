@@ -1,8 +1,37 @@
-.row{
+ .row{
     text-align: center;
 }
 
-.tt{
-    margin-left: 50px;
-    text-align: right;
+
+    
+
+
+body{
+     background-image: url("https://3c1703fe8d.site.internapcdn.net/newman/gfx/news/hires/2017/pill.jpg");
+     width: 100%;
+     height: 100vh;
+     
+     
+     
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+         background-repeat: no-repeat;
+}
+
+.brand-logo{
+      font-family: 'Anton', sans-serif;
+}
+
+
+
+.med_list{
+    text-transform: uppercase;
+}
+
+/*add_medication*/
+
+[type="checkbox"]+label {
+    font-size: 2rem;
 }

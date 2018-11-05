@@ -1,4 +1,6 @@
-{% extends "base.html" %} {% block content %}
+{% extends "base.html" %} 
+
+{% block content %}
 
 <div class = "container">
     <div class="row">
@@ -7,7 +9,7 @@
 </div>
 
 <div class="row">
-<form methods="POST" class="col s12">
+<form method="POST" class="col s12">
 
     
 <div class="row">
@@ -51,24 +53,24 @@
                 <label for="id_day_tuesday">Tuesday</label>
             </p>
             <p>
-                <input id="id_day_wednesday" type="checkbox" name="Day" value="Wednesday" {% if "green" in med.Day %}checked{% endif %} />
+                <input id="id_day_wednesday" type="checkbox" name="Day" value="Wednesday" {% if "Wednesday" in med.Day %}checked{% endif %} />
                 <label for="id_day_wednesday">Wednesday</label>
             </p>
             <p>
-                <input id="id_day_Thursday" type="checkbox" name="Day" value="Thursday" {% if "green" in med.Day %}checked{% endif %} />
+                <input id="id_day_Thursday" type="checkbox" name="Day" value="Thursday" {% if "Thursday" in med.Day %}checked{% endif %} />
                 <label for="id_day_Thursday">Thursday</label>
             </p>
             <p>
-                <input id="id-day-Friday" type="checkbox" name="Day" value="Friday" {% if "green" in med.Day %}checked{% endif %} />
+                <input id="id-day-Friday" type="checkbox" name="Day" value="Friday" {% if "Friday" in med.Day %}checked{% endif %} />
                 <label for="id-day-Friday">Friday</label>
             </p>
             <p>
-                <input id="id_day_Saturday" type="checkbox" name="Day" value="Saturday" {% if "green" in med.Day %}checked{% endif %} />
+                <input id="id_day_Saturday" type="checkbox" name="Day" value="Saturday" {% if "Saturday" in med.Day %}checked{% endif %} />
                 <label for="id_day_Saturday">Saturday</label>
             </p>
             <p>
-                <input id="id_day_Sunday" type="checkbox" name="Day" value="Sunday" {% if "green" in med.Day %}checked{% endif %} />
-                <label for="id_colour_green">Sunday</label>
+                <input id="id_day_Sunday" type="checkbox" name="Day" value="Sunday" {% if "Sunday" in med.Day %}checked{% endif %} />
+                <label for="id_day_Sunday">Sunday</label>
             </p>
         </div>
     
@@ -104,8 +106,7 @@
             <input id="Date_prescribed" name="Date_prescribed" type="text" class="datepicker" value="{{ med.Date_prescribed }}">
             <label for="icon_prefix">Date prescribed</label>
         </div>
-
-
+        
         <div class="input-field col s12, m6">
             <i class="material-icons prefix">today</i>
             <input id="Date_discontinued" name="Date_discontinued" type="text" class="datepicker" value="{{ med.Date_discontinued }}">

@@ -93,10 +93,9 @@ def editmed(med_id):
         form_values = request.form.to_dict()
         form_values["Day"]= request.form.getlist("Day")
         form_values["Time"]= request.form.getlist("Time")
-        
-       
-        
         mongo.db["Medications"].update({"_id": ObjectId(med_id)}, form_values)
+        
+        
         return redirect(url_for("get_meds"))
     else:
         

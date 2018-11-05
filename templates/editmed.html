@@ -1,143 +1,145 @@
-{% extends "base.html" %} 
+{% extends "base.html" %}{% block content %}
 
-{% block content %}
+<div class="container-fluid">
 
-<div class = "container">
     <div class="row">
-
-<h3>Edit Medication - {{ med.Medication_Name}}</h3>
-</div>
-
-<div class="row">
-<form method="POST" class="col s12">
-
-    
-<div class="row">
-        <div class="input-field col s12, m6">
-            <input id="Medication_Name" name="Medication_Name" value="{{ med.Medication_Name }}" type="text" class="validate">
-            <label for="Medication_Name"><i class="fas fa-pills"></i>  &nbsp Medication Name</label>
-         </div>
-         
-        
-
-
-        <div class="input-field col s12, m6">
-            <input id="Generic_Name" name="Generic_Name" type="text" class="validate" value="{{ med.Generic_Name }}">
-            <label for="Generic_Name"><i class="fas fa-prescription-bottle"></i>&nbspGeneric Name</label>
+        <div class="col s12">
+            <h3>Edit Medication - {{ med.Medication_Name}}</h3>
         </div>
     </div>
 
-
     <div class="row">
-
-        <div class="input-field col s12, m6">
-            <input id="Dose" name="Dose" type="text" class="validate" value="{{ med.Dose}}">
-            <label for="Dose"><i class="fas fa-mortar-pestle"></i>&nbspDose</label>
-        </div>
-    </div>
+        <form method="POST" class="col s12">
 
 
-    <div class="row">
-        <div class="col s12, m6">
-
-            <h4>Week Day</h4>
+            <div class="row">
+                <div class="input-field col s12, m6">
+                    <input id="Medication_Name" name="Medication_Name" value="{{ med.Medication_Name }}" type="text" class="validate">
+                    <label for="Medication_Name"><i class="fas fa-pills"></i>  &nbsp Medication Name</label>
+                </div>
 
 
 
-            <p>
-                <input id="id_day_monday" type="checkbox" name="Day" value="Monday" {% if "Monday" in med.Day %}checked{% endif %} />
-                <label for="id_day_monday">Monday</label>
-            </p>
-            <p>
-                <input id="id_day_tuesday" type="checkbox" name="Day" value="Tuesday" {% if "Tuesday" in med.Day %}checked{% endif %} />
-                <label for="id_day_tuesday">Tuesday</label>
-            </p>
-            <p>
-                <input id="id_day_wednesday" type="checkbox" name="Day" value="Wednesday" {% if "Wednesday" in med.Day %}checked{% endif %} />
-                <label for="id_day_wednesday">Wednesday</label>
-            </p>
-            <p>
-                <input id="id_day_Thursday" type="checkbox" name="Day" value="Thursday" {% if "Thursday" in med.Day %}checked{% endif %} />
-                <label for="id_day_Thursday">Thursday</label>
-            </p>
-            <p>
-                <input id="id-day-Friday" type="checkbox" name="Day" value="Friday" {% if "Friday" in med.Day %}checked{% endif %} />
-                <label for="id-day-Friday">Friday</label>
-            </p>
-            <p>
-                <input id="id_day_Saturday" type="checkbox" name="Day" value="Saturday" {% if "Saturday" in med.Day %}checked{% endif %} />
-                <label for="id_day_Saturday">Saturday</label>
-            </p>
-            <p>
-                <input id="id_day_Sunday" type="checkbox" name="Day" value="Sunday" {% if "Sunday" in med.Day %}checked{% endif %} />
-                <label for="id_day_Sunday">Sunday</label>
-            </p>
-        </div>
-    
 
-    
-        <div class="col s12, m6">
-
-            <h4>Time</h4>
-
-            <p>
-                <input id="id_Morning" type="checkbox" name="Time" value="Morning" {% if "Morning" in med.Time %}checked{% endif %} />
-                <label for="id_Morning">Morning</label>
-            </p>
-            <p>
-                <input id="id_Midday" type="checkbox" name="Time" value="Midday" {% if "Midday" in med.Time %}checked{% endif %} />
-                <label for="id_Midday">Midday</label>
-            </p>
-            <p>
-                <input id="id_Afternoon" type="checkbox" name="Time" value="Afternoon" {% if "Afternoon" in med.Time %}checked{% endif %} />
-                <label for="id_Afternoon">Afternoon</label>
-            </p>
-            <p>
-                <input id="id_Night" type="checkbox" name="Time" value="Night" {% if "Night" in med.Time %}checked{% endif %} />
-                <label for="id_Night">Night</label>
-            </p>
-        </div>
-    </div>
+                <div class="input-field col s12, m6">
+                    <input id="Generic_Name" name="Generic_Name" type="text" class="validate" value="{{ med.Generic_Name }}">
+                    <label for="Generic_Name"><i class="fas fa-prescription-bottle"></i>&nbspGeneric Name</label>
+                </div>
+            </div>
 
 
-    <div class="row">
-        <div class="input-field col s12, m6">
-            <i class="material-icons prefix">today</i>
-            <input id="Date_prescribed" name="Date_prescribed" type="text" class="datepicker" value="{{ med.Date_prescribed }}">
-            <label for="icon_prefix">Date prescribed</label>
-        </div>
-        
-        <div class="input-field col s12, m6">
-            <i class="material-icons prefix">today</i>
-            <input id="Date_discontinued" name="Date_discontinued" type="text" class="datepicker" value="{{ med.Date_discontinued }}">
-            <label for="icon_prefix">Date discontinued</label>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col s12, m6">
-            <i class="fas fa-briefcase-medical"></i> Doctor:
-            <div class="input-field inline">
-                <input id="Physician" name="Physician" type="text" class="validate" value="{{ med.Physician }}">
-                <label for="Physician">&nbsp Physician</label>
+            <div class="row">
+
+                <div class="input-field col s12, m6">
+                    <input id="Dose" name="Dose" type="text" class="validate" value="{{ med.Dose}}">
+                    <label for="Dose"><i class="fas fa-mortar-pestle"></i>&nbspDose</label>
+                </div>
+            </div>
+
+
+            <div class="row">
+                <div class="col s12, m6">
+
+                    <h4>Week Day</h4>
+
+
+
+                    <p>
+                        <input id="id_day_monday" type="checkbox" name="Day" value="Monday" {% if "Monday" in med.Day %}checked{% endif %} />
+                        <label for="id_day_monday">Monday</label>
+                    </p>
+                    <p>
+                        <input id="id_day_tuesday" type="checkbox" name="Day" value="Tuesday" {% if "Tuesday" in med.Day %}checked{% endif %} />
+                        <label for="id_day_tuesday">Tuesday</label>
+                    </p>
+                    <p>
+                        <input id="id_day_wednesday" type="checkbox" name="Day" value="Wednesday" {% if "Wednesday" in med.Day %}checked{% endif %} />
+                        <label for="id_day_wednesday">Wednesday</label>
+                    </p>
+                    <p>
+                        <input id="id_day_Thursday" type="checkbox" name="Day" value="Thursday" {% if "Thursday" in med.Day %}checked{% endif %} />
+                        <label for="id_day_Thursday">Thursday</label>
+                    </p>
+                    <p>
+                        <input id="id-day-Friday" type="checkbox" name="Day" value="Friday" {% if "Friday" in med.Day %}checked{% endif %} />
+                        <label for="id-day-Friday">Friday</label>
+                    </p>
+                    <p>
+                        <input id="id_day_Saturday" type="checkbox" name="Day" value="Saturday" {% if "Saturday" in med.Day %}checked{% endif %} />
+                        <label for="id_day_Saturday">Saturday</label>
+                    </p>
+                    <p>
+                        <input id="id_day_Sunday" type="checkbox" name="Day" value="Sunday" {% if "Sunday" in med.Day %}checked{% endif %} />
+                        <label for="id_day_Sunday">Sunday</label>
+                    </p>
+                </div>
+
+
+
+                <div class="col s12, m6">
+
+                    <h4>Time</h4>
+
+                    <p>
+                        <input id="id_Morning" type="checkbox" name="Time" value="Morning" {% if "Morning" in med.Time %}checked{% endif %} />
+                        <label for="id_Morning">Morning</label>
+                    </p>
+                    <p>
+                        <input id="id_Midday" type="checkbox" name="Time" value="Midday" {% if "Midday" in med.Time %}checked{% endif %} />
+                        <label for="id_Midday">Midday</label>
+                    </p>
+                    <p>
+                        <input id="id_Afternoon" type="checkbox" name="Time" value="Afternoon" {% if "Afternoon" in med.Time %}checked{% endif %} />
+                        <label for="id_Afternoon">Afternoon</label>
+                    </p>
+                    <p>
+                        <input id="id_Night" type="checkbox" name="Time" value="Night" {% if "Night" in med.Time %}checked{% endif %} />
+                        <label for="id_Night">Night</label>
+                    </p>
+                </div>
+            </div>
+
+
+            <div class="row">
+                <div class="input-field col s12, m6">
+                    <i class="material-icons prefix">today</i>
+                    <input id="Date_prescribed" name="Date_prescribed" type="text" class="datepicker" value="{{ med.Date_prescribed }}">
+                    <label for="icon_prefix">Date prescribed</label>
+                </div>
+
+                <div class="input-field col s12, m6">
+                    <i class="material-icons prefix">today</i>
+                    <input id="Date_discontinued" name="Date_discontinued" type="text" class="datepicker" value="{{ med.Date_discontinued }}">
+                    <label for="icon_prefix">Date discontinued</label>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col s12, m6">
+                    <i class="fas fa-briefcase-medical"></i> Doctor:
+                    <div class="input-field inline">
+                        <input id="Physician" name="Physician" type="text" class="validate">
+                        <label for="Physician">&nbsp Physician</label>
+
+                    </div>
+                </div>
 
             </div>
-        </div>
 
 
 
-    </div>
-
-<div class="row">
-        <div class="col s12">
-    <button class="btn waves-effect waves-light" type="submit">Save
+            <div class="row">
+                <div class="col s12">
+                    <button class="btn waves-effect waves-light" type="submit">Save
       <i class="material-icons right">playlist_add</i>
     </button>
+                </div>
+            </div>
+
+        </form>
     </div>
 </div>
 
-</form>
-</div>
-</div>
+
 
 
 

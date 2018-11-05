@@ -1,9 +1,9 @@
 {% extends 'base.html' %} {% block content %}
-<div class='container'>
+<div class='container-fluid'>
     <div class='row'>
         <div class='col s12'>
 
-            <h2> Weekly Medication Manager</h2> 
+            <h2> Weekly Medication Manager</h2>
         </div>
     </div>
 
@@ -11,15 +11,14 @@
     <div clas='row'>
         <div class='col s12'>
             <ul class="collapsible popout">
-                {% for key in ('Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday') %}
-        {% if key in weekly %}
+                {% for key in ('Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday') %} {% if key in weekly %}
 
                 <li class="med_list">
                     <div class="collapsible-header"><i class="material-icons">expand_more</i>
                         <h5><b>{{key}}</b> </h5>
-                        
 
-                        
+
+
                     </div>
 
 
@@ -27,26 +26,30 @@
 
                     <div class="collapsible-body">
                         <span> 
-              <h6>  <b>Morning :</b></h6>
+          
+          <u>   <h5> <b> Morning :</b></h5> </u> 
                {% for i in weekly[key]['Morning'] %}
-              <b> {{i}}, &nbsp</b>
+              <p><h6>{{i}}</h6></p>
                {% endfor %}
                 <hr>
-               <b> Afternoon :</b>
+          
+          <u>   <h5>     <b> Afternoon :</b></h5> </u> 
                 {% for i in weekly[key]['Afternoon'] %}
-               <b> {{i}}, &nbsp</b>
+               <p><h6>{{i}}</h6></p>
                 
                 {% endfor %}
                 <hr>
-               <b> Evening :</b>
+          
+          <u>   <h5>     <b> Evening :</b></h5> </u> 
                 {% for i in weekly[key]['Evening'] %}
-              <b>  {{i}}, &nbsp</b>
+              <p><h6>{{i}}</h6></p>
                 {% endfor %}
                 <hr>
                
-              <b>  Night :</b>
+          
+          <u>   <h5>    <b>  Night :</b></h5> </u> 
                 {% for i in weekly[key]['Night'] %}
-             <b>   {{i}}, &nbsp</b>
+             <p><h6>{{i}}</h6></p>
                 {% endfor %}
                 
                 
@@ -61,17 +64,21 @@
                     </div>
                 </li>
 
-{% endif %}
-    {% endfor %}
-                
+                {% endif %} {% endfor %}
+
 
 
             </ul>
         </div>
     </div>
-    <div class='row'>
+   
+    
+    <div class = 'row'>
         <div class='col s12 right-align'>
+            <a class="btn-floating btn-large yellow darken-1" href= "{{ url_for('get_meds') }}"><i class="material-icons">mode_edit</i></a>
+            &nbsp &nbsp
             <a class="btn-floating btn-large waves-effect waves-light red" href="{{ url_for('add_meds') }}"><i class="material-icons">add</i></a>
+            
 
         </div>
     </div>

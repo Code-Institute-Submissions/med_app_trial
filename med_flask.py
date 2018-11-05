@@ -103,21 +103,21 @@ def editmed(med_id):
         
         return render_template('editmed.html', med=the_med)
         
-@app.route('/week')
+@app.route('/trial')
 def get_meds_for_week():
     meds = mongo.db["Medications"].find()
     days=['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday']
     weekly = {}
     for day in days:
         weekly[day] = {
-            "Morning" : [i['Medication_Name'] for i in mongo.db.Medications.find({"Day": day, "Time": "Morning" })],
-            "Afternoon" : [i['Medication_Name'] for i in mongo.db.Medications.find({"Day": day, "Time": "Afternoon" })],
-            "Evening" : [i['Medication_Name'] for i in mongo.db.Medications.find({"Day": day, "Time": "Evening" })],
-            "Night" : [i['Medication_Name'] for i in mongo.db.Medications.find({"Day": day, "Time": "Night" })],
+            "Morning" : [(i['Medication_Name'],i['Dose']) for i in mongo.db.Medications.find({"Day": day, "Time": "Morning" })],
+            "Afternoon" : [(i['Medication_Name'],i['Dose']) for i in mongo.db.Medications.find({"Day": day, "Time": "Afternoon" })],
+            "Evening" : [(i['Medication_Name'],i['Dose']) for i in mongo.db.Medications.find({"Day": day, "Time": "Evening" })],
+            "Night" : [(i['Medication_Name'],i['Dose']) for i in mongo.db.Medications.find({"Day": day, "Time": "Night" })],
         }
     print(weekly)
     
-    return render_template("week.html", weekly=weekly )
+    return render_template("trial.html", weekly=weekly )
     
     
         
@@ -144,7 +144,7 @@ def trial():
     print(weekly)
     return render_template("trial.html",weekly=weekly)
 
-@app.route('/home')
+@app.route('/')
 def get_home():
     return render_template('home.html')
     

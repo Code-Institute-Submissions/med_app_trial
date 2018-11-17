@@ -103,7 +103,7 @@ def editmed(med_id):
         
         return render_template('editmed.html', med=the_med)
         
-@app.route('/trial')
+@app.route('/week')
 def get_meds_for_week():
     meds = mongo.db["Medications"].find()
     days=['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday']
@@ -117,7 +117,7 @@ def get_meds_for_week():
         }
     print(weekly)
     
-    return render_template("trial.html", weekly=weekly )
+    return render_template("week.html", weekly=weekly )
     
     
         
@@ -129,7 +129,7 @@ def current_meds():
     return render_template("Now.html", day=day, time_of_day=time_of_day, date= get_date(), meds=meds)
     
 
-@app.route('/trial')
+@app.route('/timeline')
 def trial():
     meds = mongo.db["Medications"].find()
     days=['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday']
@@ -142,7 +142,7 @@ def trial():
             "Night" : [i['Medication_Name'] for i in mongo.db.Medications.find({"Day": day, "Time": "Night" })],
         }
     print(weekly)
-    return render_template("trial.html",weekly=weekly)
+    return render_template("timeline.html",weekly=weekly)
 
 @app.route('/')
 def get_home():

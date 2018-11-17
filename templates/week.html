@@ -1,44 +1,88 @@
+{% extends 'base.html' %} {% block content %}
+<div class='container-fluid'>
+    <div class='row'>
+        <div class='col s12'>
 
-{% extends "base.html" %} {% block content %}
-<div class = 'container-fluid'>
-
-
-    
-    {% for key in ('Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday') %}
-        {% if key in weekly %}
-        <div class = 'row'>
-        <div class = "col s12, m1.5" >
-            
-            <a href="#"><h4 class = "tt"><b>{{key}}</b></h4></a>
-            <hr>
-             
-         
-         
-                    <h5><p>Morning</p></h5>
-                    {% for i in weekly[key]['Morning'] %}
-                        <p><h6>{{i}}</h6></p>
-                    {% endfor %}
-                   <h5> <p>Afternoon</p></h5>
-                    {% for i in weekly[key]['Afternoon'] %}
-                        <p><h6>{{i}}</h6></p>
-                    {% endfor %}
-                   <h5> <p>Evening</p></h5>
-                    {% for i in weekly[key]['Evening'] %}
-                        <p><h6>{{i}}</h6></p>
-                    {% endfor %}
-                   <h5> <p>Night</p></h5>
-                    {% for i in weekly[key]['Night'] %}
-                        <p><h6>{{i}}</h6></p>
-                    {% endfor %}
-                
-            
+            <h2> Weekly Medication Manager</h2>
         </div>
-       
-        
-        {% endif %}
-    {% endfor %}
+    </div>
+
+
+    <div clas='row'>
+        <div class='col s12'>
+            <ul class="collapsible popout">
+                {% for key in ('Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday') %} {% if key in weekly %}
+
+                <li class="med_list">
+                    <div class="collapsible-header"><i class="material-icons">expand_more</i>
+                        <h5><b>{{key}}</b> </h5>
+
+
+
+                    </div>
+
+
+
+
+                    <div class="collapsible-body">
+                        <span> 
+          
+          <u>   <h5> <b> Morning :</b></h5> </u> 
+               {% for i in weekly[key]['Morning'] %}
+              <p><h6>{{i[0]}}, &nbsp {{i[1]}}</h6></p>
+               {% endfor %}
+                <hr>
+          
+          <u>   <h5>     <b> Afternoon :</b></h5> </u> 
+                {% for i in weekly[key]['Afternoon'] %}
+               <p><h6>{{i[0]}}, &nbsp {{i[1]}}</h6></p>
+                
+                {% endfor %}
+                <hr>
+          
+          <u>   <h5>     <b> Evening :</b></h5> </u> 
+                {% for i in weekly[key]['Evening'] %}
+              <p><h6>{{i[0]}}, &nbsp {{i[1]}}</h6></p>
+                {% endfor %}
+                <hr>
+               
+          
+          <u>   <h5>    <b>  Night :</b></h5> </u> 
+                {% for i in weekly[key]['Night'] %}
+             <p><h6>{{i[0]}}, &nbsp {{i[1]}}</h6></p>
+                {% endfor %}
+                
+                
+               
+                
+                
+               
+               
+                
+            </span>
+
+                    </div>
+                </li>
+
+                {% endif %} {% endfor %}
+
+
+
+            </ul>
+        </div>
+    </div>
    
- 
-  </div>   
-  </div>
+    
+    <div class = 'row'>
+        <div class='col s12 right-align'>
+            <a class="btn-floating btn-large yellow darken-1" href= "{{ url_for('get_meds') }}"><i class="material-icons">mode_edit</i></a>
+            &nbsp &nbsp
+            <a class="btn-floating btn-large waves-effect waves-light red" href="{{ url_for('add_meds') }}"><i class="material-icons">add</i></a>
+            
+
+        </div>
+    </div>
+
+</div>
+
 {% endblock %}

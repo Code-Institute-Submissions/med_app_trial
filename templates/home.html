@@ -6,76 +6,89 @@
   <div class="container-fluid">
     <div class="row">
       <div class="col s12 white-text">
-        <h1 class="teal-text teal-text lighten-2">Med Manager</h1>
-        <p><h4>Designed to help you manage your medications with ease.</h4> </p>
-        
+        <h1 class="teal-text teal-text lighten-2 text">Med Manager</h1>
+        <p>
+          <h4 class = 'text '>Designed to help you manage your medications with ease.</h4>
+        </p>
+
         <a class="waves-effect waves-light btn-large" href="{{ url_for('current_meds') }}">Let's Go!</a>
-        
+
       </div>
     </div>
   </div>
-  
+
   <div class="parallax">
     <img src="https://images.pexels.com/photos/1389104/pexels-photo-1389104.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260">
   </div>
 
 </div>
 
-<div class="container-home">
-  <div class="row">
-     <div class="col m4 s12">
-       <div class="icon-block">
-         <h2 class="center light-blue-text">
-           <i class="fas fa-list-ul"></i> 
-         </h2>
-         <h5 class="center">Create a medication list</h5>
-         <p class="light">
-           Med Manager allows you to create a list of your medications, so you will always have an uptodate list at hand for hospital and clinic visits. 
-         </p>
-       </div>
-       
-     </div>
-     <div class="col m4 s12">
-       <div class="icon-block">
-         <h2 class="center light-blue-text">
-           <i class="fas fa-calendar-alt"></i>  
-         </h2>
-         <h5 class="center">Weekly calendar</h5>
-         <p class="light">
-           View a list of your medications by day and time. You can also see when your prescription finishes, so you never run out of your important medications unexpectedly. 
-         </p>
-       </div> 
-     </div>
-     <div class="col m4 s12">
-       <div class="icon-block">
-         <h2 class="center light-blue-text">
-           <i class="fas fa-clock"></i>  
-         </h2>
-         <h5 class="center">View current medications due</h5>
-         <p class="light">
-           Using the 'current meds link, you can view exactly which medications you are due to take NOW. 
-         </p>
-       </div> 
-     </div>
-   </div>
-</div>
+<div  class="container-home ">
+  <div id = 'nogutter' class="row ">
+    <div  class="col m4 s12 ">
+      <a href='{{ url_for('add_meds') }}' class='hvr-sweep-to-bottom'>
+        <div class="icon-block ">
+          <h2 class="center light-blue-text">
+            <i class="fas fa-list-ul"></i>
+          </h2>
+          <h5 class="center">Create a medication list</h5>
+          <p class="light">
+            Med Manager allows you to create a list of your medications, so you will always have an uptodate list at hand for hospital and clinic visits.
+          </p>
+        </div>
+      </a>
 
-
- 
-  <div class="parallax-container2 center valign-wrapper">
-    <div class="row">
-      <div class="col s12">
-        <h4>Tell your health care provider that you are using the Med Manager app to help you both manage your medications with ease</h4>
-      </div>
     </div>
+    <div class="col m4 s12 ">
+      <a href='{{ url_for('get_meds_for_week') }}' class='hvr-sweep-to-bottom'>
+        <div class="icon-block">
+          <h2 class="center light-blue-text">
+            <i class="fas fa-calendar-alt"></i>
+          </h2>
+          <h5 class="center">Weekly calendar</h5>
+          <p class="light">
+            View a list of your medications by day and time. You can also see when your prescription finishes, so you never run out of your important medications unexpectedly.
+          </p>
+        </div>
+      </a>
+    </div>
+    <div  class="col m4 s12 ">
+      <a href='{{ url_for('current_meds') }}' class='hvr-sweep-to-bottom'>
+        <div class="icon-block">
+          <h2 class="center light-blue-text">
+            <i class="fas fa-clock"></i>
+          </h2>
+          <h5 class="center">View current medications due</h5>
+          <p class="light">
+             By clicking on the 'NOW' link, view which medications you are due to take today at the current time, either morning, afternoon, evening or night.
+          </p>
+        </div>
+      </a>
+    </div>
+
   </div>
 </div>
 
 
 
+<div class=" container2 center valign-wrapper">
 
-  
- 
+  <div class="row">
+    <div class="col s12">
+      <h4 class='text'>Tell your health care provider that you are using Med Manager to help you both manage your medications with ease</h4>
+    </div>
+  </div>
+
+
+</div>
+
+
+
+
+
+
+
+
 
 <!-- Footer -->
 <footer class="page-footer orange">
@@ -83,18 +96,20 @@
     <div class="row">
       <div class="col s12">
         <h4 class="white-text"> Meeting patient needs</h4>
-        <p class="grey-text text-lighten-4"><h5>
-          This application was designed with the needs of senior citizens and polypharmacy in mind.</p>
-          <p class="grey-text text-lighten-4"> My aim is to allow people to manage their own medication in order to maintain independence and self-care where possible without comprominsing on accuracy, adherence or patient safety. </h5>
+        <p class="grey-text text-lighten-4">
+          <h5>
+            This application was designed with the needs of senior citizens and polypharmacy in mind.</p>
+        <p class="grey-text text-lighten-4"> My aim is to allow people to manage their own medication in order to maintain independence and self-care where possible without comprominsing on accuracy, adherence or patient safety. </h5>
         </p>
-
+</div>
+      </div>
     </div>
-  </div>
-  <div class="footer-copyright">
-    <div class="container">
-      © 2018 Copyright Text
+    <div class="footer-copyright">
+      <div class="col s12">
+        © 2018 Copyright Text
+      </div>
     </div>
-  </div>
+    
 </footer>
 
 

@@ -147,8 +147,13 @@ label {
     color: white;
 }
 
-#nogutter div {
+#nogutter{
     padding: 0;
+    margin-bottom: 0px;
+}
+
+#nogutter div{
+    padding:0;
 }
 
 .hvr-sweep-to-bottom:before {

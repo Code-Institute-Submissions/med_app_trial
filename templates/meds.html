@@ -1,5 +1,6 @@
 {% extends 'base.html' %} {% block content %}
 <div class='container-fluid'>
+    <div class = 'container'>
     <div class='row'>
         <div class='col s12'>
 
@@ -27,17 +28,20 @@
                         <span> 
                 <b>Generic Name: </b>
                 {{med.Generic_Name}}
-                <hr>
+                <br>
+                <br>
                <b> Dose:</b>
                 {{med.Dose}}
                 
                 {{med.Route}}
-                <hr>
+                <br>
+                <br>
                <b> Take {{med.Medication_Name}} on these Days: </b>
                 {% for d in med.Day%}
                 {{d }},
                 {% endfor %}
-                <hr>
+                <br>
+                <br>
                
               <b>  Take {{med.Medication_Name}} at these times each day:</b>
                 {% for t in med.Time%}
@@ -48,15 +52,18 @@
                
                 
                 
-                <hr>
+                <br>
+                <br>
               <b>  Prescribed by:</b>
                 {{med.Physician}}
                 
-                <hr>
+                <br>
+                <br>
               <b>  Date prescribed:</b>
                 {{med.Date_prescribed}} 
                 
-                <hr>
+                <br>
+                <br>
                <b> Expiry Date:</b>
                 {{med.Date_discontinued}}
                 
@@ -97,6 +104,7 @@
         </div>
     </div>
 
+</div>
 </div>
 
 {% endblock %}

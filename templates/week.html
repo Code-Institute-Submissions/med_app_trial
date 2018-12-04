@@ -7,9 +7,10 @@
         </div>
     </div>
 
-
-    <div clas='row'>
-        <div class='col s12'>
+<div class='container'>
+    <div class='row'>
+       
+        <div class='col s12 md4 offset-md6'>
             <ul class="collapsible popout">
                 {% for key in ('Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday') %} {% if key in weekly %}
 
@@ -31,21 +32,25 @@
                {% for i in weekly[key]['Morning'] %}
               <p><h6>{{i[0]}}, &nbsp {{i[1]}}</h6></p>
                {% endfor %}
-                <hr>
+               
+               <br>
+              
           
           <u>   <h5>     <b> Afternoon :</b></h5> </u> 
                 {% for i in weekly[key]['Afternoon'] %}
                <p><h6>{{i[0]}}, &nbsp {{i[1]}}</h6></p>
                 
                 {% endfor %}
-                <hr>
+                
+                <br>
+              
           
           <u>   <h5>     <b> Evening :</b></h5> </u> 
                 {% for i in weekly[key]['Evening'] %}
               <p><h6>{{i[0]}}, &nbsp {{i[1]}}</h6></p>
                 {% endfor %}
-                <hr>
                
+               <br>
           
           <u>   <h5>    <b>  Night :</b></h5> </u> 
                 {% for i in weekly[key]['Night'] %}
@@ -70,6 +75,7 @@
 
             </ul>
         </div>
+        
     </div>
    
     
@@ -83,6 +89,7 @@
         </div>
     </div>
 
+</div>
 </div>
 
 {% endblock %}

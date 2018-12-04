@@ -23,23 +23,29 @@
         {% for med in meds %}
 
         <div class="col s12">
-            <p>
-                <h4 class="test"> <i class="fas fa-pills"> &nbsp {{med.Medication_Name}}</i> {{med.Dose}} </h4>
-            </p>
-           
-        <button class ='btn-large' id="hide"><i class="fas fa-check"></i></button>
             
-             </div>
+                <h4 class="test"> <i class="fas fa-pills"> &nbsp {{med.Medication_Name}}</i> {{med.Dose}} </h4>
+         
+         
+        <!--<form method = '#'>-->
+        <!--    <input type="text" name="taken_med"/>-->
+        <!--    <input class = 'btn' id="hide" type="submit" value="Taken">-->
+        
+        <!--     </form> -->
+             
+            </div>
+            
+             
         {% endfor %}
         
         
         
     </div>
-    <div class="row">
+    <!--<div class="row">-->
 
-        <button class ='btn-large' id="show">Show medication list</button>
+    <!--    <button class ='btn-large' id="show">Show medication list</button>-->
 
-    </div>
+    <!--</div>-->
     
 
 

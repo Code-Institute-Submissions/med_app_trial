@@ -15,9 +15,10 @@
     <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/hover.css/2.3.1/css/hover-min.css" type="text/css" />
     
+    
 
 
-    <title>Document</title>
+    <title>Medication manager</title>
 </head  >
 
 <body>
@@ -30,14 +31,14 @@
                 <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
                 <ul id="nav-mobile" class="right hide-on-med-and-down">
                     <li><a href="{{ url_for('current_meds') }}">Now</a></li>
-                    <li><a href="{{ url_for('get_meds_for_week') }}">Week</a></li>
+                    <li><a href="{{ url_for('get_meds_for_week') }}">Your Weekly Schedule</a></li>
                     <li><a href="{{ url_for('add_meds') }}">Add Medication</a></li>
                     <li><a href="{{ url_for('get_meds') }}">Edit Medications</a></li>
                 </ul>
                 <ul class="side-nav" id="mobile-demo">
-                    <li><a href="{{ url_for('get_home') }}">Home</a></li>
+                    <li><a href="{{ url_for('get_meds_for_week') }}">Week</a></li>
                     <li><a href="{{ url_for('current_meds') }}">Now</a></li>
-                    <li><a href="{{ url_for('add_meds') }}">New Medication</a></li>
+                    <li><a href="{{ url_for('add_meds') }}">Add Medication</a></li>
 
                     <li><a href="{{ url_for('get_meds') }}">Edit Medications</a></li>
                 </ul>

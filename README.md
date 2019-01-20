@@ -14,13 +14,13 @@ Read below to find out how the Medication Manager App aims to reduce these risks
  
 
  
-### UX
+## UX
 
-Megan: I am a 41yr old woman and personal carer to my elderly mother, Mary, who has severe rheumatoid arthritis. Mary takes over 20 medications per day, with different medications due at different times each day. Her medication list changes frequently as she is in and out of hospital. It is difficult to keep track of her medications from one day to the next. The Med Manager app allows me to create a list of my mother's medications including doseage, administration time and even who the prescriber is. I can add and delete medications as needed and change the doseage. The 'NOW' feature tells me exactly which medications Mary is due at any given time so it is less likely that I will give her the wrong medication or miss a dose. The Med Manager app has made taking care of my mother much easier and I feel more confident about managing her medications. 
+####Megan: I am a 41yr old woman and personal carer to my elderly mother, Mary, who has severe rheumatoid arthritis. Mary takes over 20 medications per day, with different medications due at different times each day. Her medication list changes frequently as she is in and out of hospital. It is difficult to keep track of her medications from one day to the next. The Med Manager app allows me to create a list of my mother's medications including doseage, administration time and even who the prescriber is. I can add and delete medications as needed and change the doseage. By clicking on the "NOW" link I know which medications Mary is due at any given time so it is less likely that I will give her the wrong medication or miss a dose. The Med Manager app has made taking care of my mother much easier and I feel more confident about managing her medications. 
 
-John: I am a 75yr old widower with some memory problems and heart troubles. I have to take lots of different medication every day for my high blood pressure. When i use the Med Manager App, it reminds me what day it is, what time it is and what medications i have to take at that time. I can check off my medications as i take them so i dont take the same medication twice by accident, which could be very dangerous for me. I can also check what date my prescription expires so i know in advance when i have to fill a new one. When i visit my GP or my cardiologist, I have an uptodate list of my medications with me. 
+####John: I am a 75yr old widower with some memory problems and heart troubles. I have to take lots of different medication every day for my high blood pressure. When I use the Med Manager App, it reminds me what day it is, what time it is and what medications i have to take at that time. I can check off my medications as i take them so i dont take the same medication twice by accident, which could be very dangerous for me. I can also check what date my prescription expires so I know in advance when I have to fill a new one. When i visit my GP or my cardiologist, I have an uptodate list of my medications with me. 
  
-Sarah: I'm a 35yr old emergency doctor. Often patients arrive to the emergency department alone or confused. It can be impossile to get a list of a patients medications outside of normal working hours. If a patient is using the Med Manager app, I can see exactly what medications they are taking and have a good idea of what illnesses they have. This saves time and allows for quicker and safer treatment. I can also update the list before the patient is discharged home to allow for any changes to medications in hospital. Overall the Med Manager App makes my job easier. 
+####Sarah: I'm a 35yr old emergency doctor. Often patients arrive to the emergency department alone or confused. It can be impossile to get a list of a patients medications outside of normal working hours. If a patient is using the Med Manager app, I can see exactly what medications they are taking and have a good idea of what illnesses they have. This saves time and allows for quicker and safer treatment. I can also update the list before the patient is discharged home to allow for any changes to medications in hospital. Overall the Med Manager App makes my job easier. 
 
 
 ## Features
@@ -70,7 +70,7 @@ This page also has a large red button which will bring you to the 'add medicatio
  
 
 [JQuery](https://jquery.com)
-...I used jquery  for the following functions:
+- I used jquery  for the following functions:
 1. sidebar nav which is collapsible
 2. 'hide'and 'show' function to hide and display medication list onclick
 3. 'datepicker' for the pop up calendar
@@ -78,15 +78,15 @@ This page also has a large red button which will bring you to the 'add medicatio
     
 
 [Materialize](https://materializecss.com/about.html)
-...I used Materialize as an alternative to bootstrap to give a simple responsive layout:
+- I used Materialize as an alternative to bootstrap to give a simple responsive layout.
     
 
 
 ## Libraries:
 
-...Fontawesome- (https://fontawesome.com/)
-...Hover.css- (http://ianlunn.github.io/Hover/)
-...Google Fonts- (https://fonts.google.com)
+- Fontawesome- (https://fontawesome.com/)
+- Hover.css- (http://ianlunn.github.io/Hover/)
+- Google Fonts- (https://fonts.google.com)
 
 
 ## Testing
@@ -103,52 +103,52 @@ This page also has a large red button which will bring you to the 'add medicatio
 ### Home page:
 
 * Mobile view:
-...On smaller screens, the navbar collapses to a dropdown menu. 
-...The 'Let's go! button navigates to the 'Now' page with a list of current medications. 
-...The hover-to-sweep action does not work on smaller screens. However clicking on each of the icons will take the user to the appropriate page. 
+... On smaller screens, the navbar collapses to a dropdown menu. 
+... The 'Let's go! button navigates to the 'Now' page with a list of current medications. 
+... The hover-to-sweep action does not work on smaller screens. However clicking on each of the icons will take the user to the appropriate page. 
 
 * Larger screens:
-...The navbar is clear and functioning. 
-...The hover-to-sweep action works on the 'create a medication'/'weekly calendar'/'view current medications' links. These links are fucntioning and open the appropriate pages. 
-...The 'Let's go! button navigates to the 'Now' page with a list of current medications. 
+... The navbar is clear and functioning. 
+... The hover-to-sweep action works on the 'create a medication'/'weekly calendar'/'view current medications' links. These links are fucntioning and open the appropriate pages. 
+... The 'Let's go! button navigates to the 'Now' page with a list of current medications. 
 
 ### Now page:
 
 * Mobile view:
-...By clicking on the 'Now' link in the navbar the "Now page" with a list of currently due medications. 
+... By clicking on the 'Now' link in the navbar the "Now page" with a list of currently due medications. 
 
 * Larger screens:
-...By clicking on the 'Now' link in the navbar the "Now page" with a list of currently due medications. 
+... By clicking on the 'Now' link in the navbar the "Now page" with a list of currently due medications. 
 
 ### Your Weekly schedule:
 
 * Mobile view/larger screens: 
-...By clicking on the "your weekly schedule" link in the navbar this page opens. 
-...An accordian of the days of the days of the week opens to display medication list for each day of the week. 
-...By clicking on the floating addition button at the bottom right corner of the page, the 'add medication' form will render.
-...By clicking on the floating edit button on the bottom roght corner of the page, the 'edit medications' form will render. 
+... By clicking on the "your weekly schedule" link in the navbar this page opens. 
+... An accordian of the days of the days of the week opens to display medication list for each day of the week. 
+... By clicking on the floating addition button at the bottom right corner of the page, the 'add medication' form will render.
+... By clicking on the floating edit button on the bottom roght corner of the page, the 'edit medications' form will render. 
 
  
 
 ### Add medication:
 
 * Mobile View/larger screens:
-...By clicking on the "Add medication" link in the navbar this form opens. 
-...By clicking on the calendar icon, a popup calendar appears to select the dates prescribed and discontinued. 
-...By clicking om each of the 'time of day' and 'weekday' boxes, a tick will appear. 
-...I can enter the name, generic name, doseage and physician name. 
-...By clicking on the 'add medication' button, I am brought to the 'edit medication list' page and the new medication has been added to the list. 
+... By clicking on the "Add medication" link in the navbar this form opens. 
+... By clicking on the calendar icon, a popup calendar appears to select the dates prescribed and discontinued. 
+... By clicking om each of the 'time of day' and 'weekday' boxes, a tick will appear. 
+... I can enter the name, generic name, doseage and physician name. 
+... By clicking on the 'add medication' button, I am brought to the 'edit medication list' page and the new medication has been added to the list. 
 
 ### Edit Medication: 
 
 * Mobile View/larger screens:
-...By clicking on the "Edit medications" link in the navbar,  a list of all medications appears in accordian form. 
-...By clicking on each medication name, the accordian opens to display the details of that medication. 
-...By clicking on the delete 
-...By clicking on the calendar icon, a popup calendar appears to select the dates prescribed and discontinued. 
-...By clicking om each of the 'time of day' and 'weekday' boxes, a tick will appear. 
-...I can enter the name, generic name, doseage and physician name. 
-...By clicking on the 'add medication' button, I am brought to the 'edit medication list' page and the new medication has been added to the list. 
+... By clicking on the "Edit medications" link in the navbar,  a list of all medications appears in accordian form. 
+... By clicking on each medication name, the accordian opens to display the details of that medication. 
+... By clicking on the delete 
+... By clicking on the calendar icon, a popup calendar appears to select the dates prescribed and discontinued. 
+... By clicking om each of the 'time of day' and 'weekday' boxes, a tick will appear. 
+... I can enter the name, generic name, doseage and physician name. 
+... By clicking on the 'add medication' button, I am brought to the 'edit medication list' page and the new medication has been added to the list. 
 
 
 
@@ -177,5 +177,5 @@ Validation by W3C Css validator <http://jigsaw.w3.org/css-validator/validator$li
 
 ### Content
 
-...No external information sources were used. 
+- No external information sources were used. 
 

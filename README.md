@@ -103,52 +103,52 @@ This page also has a large red button which will bring you to the 'add medicatio
 ### Home page:
 
 * Mobile view:
-... On smaller screens, the navbar collapses to a dropdown menu. 
-... The 'Let's go! button navigates to the 'Now' page with a list of current medications. 
-... The hover-to-sweep action does not work on smaller screens. However clicking on each of the icons will take the user to the appropriate page. 
+  On smaller screens, the navbar collapses to a dropdown menu. 
+  The 'Let's go! button navigates to the 'Now' page with a list of current medications. 
+  The hover-to-sweep action does not work on smaller screens. However clicking on each of the icons will take the user to the appropriate page. 
 
 * Larger screens:
-... The navbar is clear and functioning. 
-... The hover-to-sweep action works on the 'create a medication'/'weekly calendar'/'view current medications' links. These links are fucntioning and open the appropriate pages. 
-... The 'Let's go! button navigates to the 'Now' page with a list of current medications. 
+  The navbar is clear and functioning. 
+  The hover-to-sweep action works on the 'create a medication'/'weekly calendar'/'view current medications' links. These links are functioning and open the appropriate pages. 
+  The 'Let's go! button navigates to the 'Now' page with a list of current medications. 
 
 ### Now page:
 
 * Mobile view:
-... By clicking on the 'Now' link in the navbar the "Now page" with a list of currently due medications. 
+  By clicking on the 'Now' link in the navbar the "Now page" with a list of currently due medications. 
 
 * Larger screens:
-... By clicking on the 'Now' link in the navbar the "Now page" with a list of currently due medications. 
+  By clicking on the 'Now' link in the navbar the "Now page" with a list of currently due medications. 
 
 ### Your Weekly schedule:
 
 * Mobile view/larger screens: 
-... By clicking on the "your weekly schedule" link in the navbar this page opens. 
-... An accordian of the days of the days of the week opens to display medication list for each day of the week. 
-... By clicking on the floating addition button at the bottom right corner of the page, the 'add medication' form will render.
-... By clicking on the floating edit button on the bottom roght corner of the page, the 'edit medications' form will render. 
+  By clicking on the "your weekly schedule" link in the navbar this page opens. 
+  An accordian of the days of the days of the week opens to display medication list for each day of the week. 
+  By clicking on the floating addition button at the bottom right corner of the page, the 'add medication' form will render.
+  By clicking on the floating edit button on the bottom roght corner of the page, the 'edit medications' form will render. 
 
  
 
 ### Add medication:
 
 * Mobile View/larger screens:
-... By clicking on the "Add medication" link in the navbar this form opens. 
-... By clicking on the calendar icon, a popup calendar appears to select the dates prescribed and discontinued. 
-... By clicking om each of the 'time of day' and 'weekday' boxes, a tick will appear. 
-... I can enter the name, generic name, doseage and physician name. 
-... By clicking on the 'add medication' button, I am brought to the 'edit medication list' page and the new medication has been added to the list. 
+  By clicking on the "Add medication" link in the navbar this form opens. 
+  By clicking on the calendar icon, a popup calendar appears to select the dates prescribed and discontinued. 
+  By clicking om each of the 'time of day' and 'weekday' boxes, a tick will appear. 
+  I can enter the name, generic name, doseage and physician name. 
+  By clicking on the 'add medication' button, I am brought to the 'edit medication list' page and the new medication has been added to the list. 
 
 ### Edit Medication: 
 
 * Mobile View/larger screens:
-... By clicking on the "Edit medications" link in the navbar,  a list of all medications appears in accordian form. 
-... By clicking on each medication name, the accordian opens to display the details of that medication. 
-... By clicking on the delete 
-... By clicking on the calendar icon, a popup calendar appears to select the dates prescribed and discontinued. 
-... By clicking om each of the 'time of day' and 'weekday' boxes, a tick will appear. 
-... I can enter the name, generic name, doseage and physician name. 
-... By clicking on the 'add medication' button, I am brought to the 'edit medication list' page and the new medication has been added to the list. 
+  By clicking on the "Edit medications" link in the navbar,  a list of all medications appears in accordian form. 
+  By clicking on each medication name, the accordian opens to display the details of that medication. 
+  By clicking on the delete 
+  By clicking on the calendar icon, a popup calendar appears to select the dates prescribed and discontinued. 
+  By clicking om each of the 'time of day' and 'weekday' boxes, a tick will appear. 
+  I can enter the name, generic name, doseage and physician name. 
+  By clicking on the 'add medication' button, I am brought to the 'edit medication list' page and the new medication has been added to the list. 
 
 
 

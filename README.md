@@ -4,7 +4,7 @@
  
 ## Overview
  
-This website was designed as a tool to help people manage medication. It can be used either for personal use or by a carer, as an aid to  help organise their patient's medications. 
+This website was designed as a tool to help people manage medication. It can be used either for personal use or by a carer, as an aid to organise their patient's medications. 
 
 It is often the case that on presenting to a medical practitioner, either GP or specialist, that patients do not have a list of their medications at hand. Many people are not aware of what medications they take regularly, who prescribed them, why or when. This makes it difficult for medical practitioners to alter patient medication. Similiarly it is difficult for the patient to adhere to their treatment plan. People are at a real risk not only of missing vital medication but also of overdosing on medication. 
 

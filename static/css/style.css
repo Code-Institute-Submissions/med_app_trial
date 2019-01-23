@@ -26,6 +26,10 @@ nav {
     background-color: white;
 }
 
+#home{
+    padding-left: 10px;
+}
+
 /*-------------------------------------------------------------*/
 
 .row {
@@ -35,7 +39,7 @@ nav {
 
 
 
-
+/*static background image..........*/
 
 body {
     background-image: url("https://3c1703fe8d.site.internapcdn.net/newman/gfx/news/hires/2017/pill.jpg");
@@ -88,6 +92,9 @@ label {
     color: black !important;
 }
 
+#add{
+    color:black;
+}
 
 
 /*Home page______________________________________*/
@@ -107,7 +114,7 @@ label {
 
 
 
-
+     background-attachment: fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -133,7 +140,7 @@ label {
 
 
 
-
+    background-attachment: fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -161,6 +168,12 @@ label {
     opacity: 0.3;
 }
 
+h1{
+    color: teal ;
+}
+
+/*footer..............................*/
+
 #footer{
     background-color: lightblue;
 }
@@ -168,5 +181,12 @@ label {
 .footer{
     color:white;
 
+}
+
+.footer-copyright{
+    background-color: white;
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
 }
 

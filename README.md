@@ -32,6 +32,7 @@ Click the link to view my mockup for The Med App on balsamiq.
 ### Existing Features
 
 * Home page with clear, easy navbar links to website pages.
+Parallax scrolling. 
 A large 'lets go!' button on the centre of the homepage which will bring you directly to your medications due in real time. 
 The homepage describes some features of the app with links to these features and hover-sweep-to-bottom effect. 
 Writing overlays a grayscale picture of an elderly gentleman using the app. 
@@ -157,6 +158,8 @@ This page also has a large red button which will bring you to the 'add medicatio
 ## Contributing
 
 Validation by W3C Css validator <http://jigsaw.w3.org/css-validator/validator$link>
+
+I followed a materialize tutorial in order to implement the parallax scrolling on the home page. <https://www.um.es/docencia/barzana/materializecss/parallax.html>
 
 
 ## Deployment

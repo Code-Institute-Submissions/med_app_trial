@@ -10,6 +10,10 @@ It is often the case that on presenting to a medical practitioner, either GP or 
 
 Read below to find out how the Medication Manager App aims to reduce these risks and increase medication saftey and adherence. 
 
+
+## Mockup <https://balsamiq.cloud/s3pki77/p4agro5>
+
+Click the link to view my mockup for The Med App on balsamiq.
  
  
 
@@ -79,7 +83,10 @@ This page also has a large red button which will bring you to the 'add medicatio
 
 [Materialize](https://materializecss.com/about.html)
 - I used Materialize as an alternative to bootstrap to give a simple responsive layout.
-    
+
+
+[Balsamiq](https://balsamiq.com/)
+- I used Balsamiq cloud to create my mockup. 
 
 
 ## Libraries:
@@ -90,39 +97,33 @@ This page also has a large red button which will bring you to the 'add medicatio
 
 
 ## Testing
-- Prototype code was written and tested using jasmine
-- All code used on the site has been tested to ensure everything is working as expected
-- Site viewed and tested in the following browsers:
-  - Google Chrome
-  - Opera
-  - Microsoft Edge
-  - Mozilla Firefox
-  - 
+
+- Manual testing was carried out as follows: 
   
 
 ### Home page:
 
-* Mobile view:
+* Mobile view:  
   On smaller screens, the navbar collapses to a dropdown menu.   
   The 'Let's go! button navigates to the 'Now' page with a list of current medications.   
   The hover-to-sweep action does not work on smaller screens. However clicking on each of the icons will take the user to the appropriate page.   
 
-* Larger screens:
+* Larger screens:  
   The navbar is clear and functioning.   
   The hover-to-sweep action works on the 'create a medication'/'weekly calendar'/'view current medications' links. These links are functioning and open the appropriate pages.   
   The 'Let's go! button navigates to the 'Now' page with a list of current medications.   
 
 ### Now page:
 
-* Mobile view:
+* Mobile view:  
   By clicking on the 'Now' link in the navbar the "Now page" with a list of currently due medications. 
 
-* Larger screens:
+* Larger screens:  
   By clicking on the 'Now' link in the navbar the "Now page" with a list of currently due medications. 
 
 ### Your Weekly schedule:
 
-* Mobile view/larger screens: 
+* Mobile view/larger screens:   
   By clicking on the "your weekly schedule" link in the navbar this page opens.   
   An accordian of the days of the days of the week opens to display medication list for each day of the week.   
   By clicking on the floating addition button at the bottom right corner of the page, the 'add medication' form will render.  
@@ -132,7 +133,7 @@ This page also has a large red button which will bring you to the 'add medicatio
 
 ### Add medication:
 
-* Mobile View/larger screens:
+* Mobile View/larger screens:  
   By clicking on the "Add medication" link in the navbar this form opens.   
   By clicking on the calendar icon, a popup calendar appears to select the dates prescribed and discontinued.   
   By clicking om each of the 'time of day' and 'weekday' boxes, a tick will appear.   
@@ -141,7 +142,7 @@ This page also has a large red button which will bring you to the 'add medicatio
 
 ### Edit Medication: 
 
-* Mobile View/larger screens:
+* Mobile View/larger screens:  
   By clicking on the "Edit medications" link in the navbar,  a list of all medications appears in accordian form.   
   By clicking on each medication name, the accordian opens to display the details of that medication.   
   By clicking on the delete button i can delete the medication from the list.  
@@ -159,6 +160,21 @@ Validation by W3C Css validator <http://jigsaw.w3.org/css-validator/validator$li
 
 
 ## Deployment
+
+<https://flask-med-app.herokuapp.com/>
+
+1. I deployed The Med App using the Heroku cloud app platform as follows: 
+
+2. I logged into my Heroku account and clicked on my dashboard link. From here I clicked on the 'New' link in the top right corner and chose 'create new app'.
+
+3. I typed in my app name and chose Europe region in the drop down menu and clicked the 'create app' button. 
+
+4. I scrolled down to deployment method and clicked the 'github' link. I connected to my github account and chose the Med App repository name. 
+
+5. I scrolled down to manual deploy and chose 'master' branch to deploy and clicked the 'deploy branch' button. Finally I enabled automatic deploys so that with each Github push, the updated App would be deployed. 
+
+* I used os.getenv(PORT, 8080) as the port and os.getenv(IP, 0.0.0.0) as the host in my scripts. 
+
  
 ### Getting the code up and running
 1. Firstly you will need to clone this repository by running the ```git clone <project's Github URL>``` command

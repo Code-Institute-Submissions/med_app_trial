@@ -110,7 +110,7 @@ label {
 
 
 .parallax-container {
-    background-image: url("https://images.pexels.com/photos/1389104/pexels-photo-1389104.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
+    background: url("https://images.pexels.com/photos/1389104/pexels-photo-1389104.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260") no-repeat center center fixed;
     width: 100vw;
     height: 100vh;
     height: 500px;

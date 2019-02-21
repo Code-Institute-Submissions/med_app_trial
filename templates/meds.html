@@ -1,31 +1,34 @@
 {% extends 'base.html' %} {% block content %}
-<div class='container-fluid'>
-    <div class = 'container'>
-    <div class='row'>
-        <div class='col s12'>
 
-            <h2> Edit Medication List</h2>
+<div class="container-fluid">
+    <div class="container">
+
+        <div class="row">
+            <div class="col s12">
+
+                <h2> Edit Medication List</h2>
+            </div>
         </div>
-    </div>
 
 
-    <div clas='row'>
-        <div class='col s12'>
-            <ul class="collapsible popout">
-                {% for med in meds %}
+        <div class="row">
 
-                <li class="med_list">
-                    <div class="collapsible-header"><i class="material-icons">expand_more</i>
-                        <h5><b>{{med.Medication_Name}}</b> </h5>
+            <div class="col s12">
+                <ul class="collapsible popout">
+                    {% for med in meds %}
 
-
-                    </div>
+                    <li class="med_list">
+                        <div class="collapsible-header"><i class="material-icons">expand_more</i>
+                            <h5><b>{{med.Medication_Name}}</b> </h5>
 
 
+                        </div>
 
 
-                    <div class="collapsible-body">
-                        <span> 
+
+
+                        <div class="collapsible-body">
+                            <span> 
                 <b>Generic Name: </b>
                 {{med.Generic_Name}}
                 <br>
@@ -70,13 +73,13 @@
                 
                 <section>&nbsp &nbsp &nbsp</section>
                 
-             <div class = 'row'>  
-            <div class = 'col s12, m1.5'>
+             <div class = "row">  
+            <div class = "col s12, m1.5">
 
                     <a class="valign-wrapper" href="{{ url_for('editmed', med_id = med._id) }}" class="waves-effect waves-teal btn-flat">Edit <i class="material-icons">mode_edit</i></a>
                         
                     </div>    
-                   <div class = 'col s12, m1.5'>     
+                   <div class = "col s12, m1.5">     
                         <a align="right" class="valign-wrapper" href="{{ url_for('delete_med', med_id = med._id) }}" class="waves-effect waves-teal btn-flat" >Delete<i class="material-icons">delete</i></a>
                         
                          
@@ -86,25 +89,25 @@
                 
             </span>
 
-                    </div>
-                </li>
+                        </div>
+                    </li>
 
 
-                {% endfor %}
+                    {% endfor %}
 
 
-            </ul>
+                </ul>
+            </div>
         </div>
-    </div>
-   
-    <div class='row'>
-        <div class='col s12 right-align'>
-            <a class="btn-floating btn-large waves-effect waves-light red" href="{{ url_for('add_meds') }}"><i class="material-icons">add</i></a>
 
+        <div class="row">
+            <div class="col s12 right-align">
+                <a class="btn-floating btn-large waves-effect waves-light red" href="{{ url_for('add_meds') }}"><i class="material-icons">add</i></a>
+
+            </div>
         </div>
-    </div>
 
-</div>
+    </div>
 </div>
 
 {% endblock %}

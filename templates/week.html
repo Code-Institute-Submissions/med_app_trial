@@ -1,32 +1,37 @@
 {% extends 'base.html' %} {% block content %}
-<div class='container-fluid'>
-    <div class='row'>
-        <div class='col s12'>
+
+<div class="container-fluid">
+
+    <div class="row">
+        <div class="col s12">
 
             <h2> Weekly Medication Manager</h2>
         </div>
     </div>
 
-<div class='container'>
-    <div class='row'>
-       
-        <div class='col s12 md4 offset-md6'>
-            <ul class="collapsible popout">
-                {% for key in ('Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday') %} {% if key in weekly %}
+    <div class="container">
 
-                <li class="med_list">
-                    <div class="collapsible-header"><i class="material-icons">expand_more</i>
-                        <h5><b>{{key}}</b> </h5>
+        <div class="row">
 
+            <!-I would like to thank my tutor Michael Park for help with the following code--->
 
+            <div class="col s12 md4 offset-md6">
+                <ul class="collapsible popout">
+                    {% for key in ('Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday') %} {% if key in weekly %}
 
-                    </div>
-
+                    <li class="med_list">
+                        <div class="collapsible-header"><i class="material-icons">expand_more</i>
+                            <h5><b>{{key}}</b> </h5>
 
 
 
-                    <div class="collapsible-body">
-                        <span> 
+                        </div>
+
+
+
+
+                        <div class="collapsible-body">
+                            <span> 
           
           <u>   <h5> <b> Morning :</b></h5> </u> 
                {% for i in weekly[key]['Morning'] %}
@@ -66,30 +71,30 @@
                 
             </span>
 
-                    </div>
-                </li>
+                        </div>
+                    </li>
 
-                {% endif %} {% endfor %}
+                    {% endif %} {% endfor %}
 
 
 
-            </ul>
-        </div>
-        
-    </div>
-   
-    
-    <div class = 'row'>
-        <div class='col s12 right-align'>
-            <a class="btn-floating btn-large yellow darken-1" href= "{{ url_for('get_meds') }}"><i class="material-icons">mode_edit</i></a>
-            &nbsp &nbsp
-            <a class="btn-floating btn-large waves-effect waves-light red" href="{{ url_for('add_meds') }}"><i class="material-icons">add</i></a>
-            
+                </ul>
+            </div>
 
         </div>
-    </div>
 
-</div>
+
+        <div class="row">
+            <div class="col s12 right-align">
+
+                <a class="btn-floating btn-large yellow darken-1" href="{{ url_for('get_meds') }}"><i class="material-icons">mode_edit</i></a> &nbsp &nbsp
+                <a class="btn-floating btn-large waves-effect waves-light red" href="{{ url_for('add_meds') }}"><i class="material-icons">add</i></a>
+
+
+            </div>
+        </div>
+
+    </div>
 </div>
 
 {% endblock %}

@@ -1,24 +1,29 @@
 # Medication Manager App
 
-<http://jigsaw.w3.org/css-validator/validator$link>
+View the Med App at <https://flask-med-app.herokuapp.com/>
+
+Css validated by jigsaw.
+<http://jigsaw.w3.org/css-validator/check/referer>
  
-## Overview
+## Introduction
  
-This website was designed as a tool to help people manage medication. It can be used either for personal use or by a carer, as an aid to organise their patient's medications. 
+This website is a CRUD app designed as a tool to help people manage medication. It can be used either for personal use or by a carer, as an aid to organise their patient's medications. 
 
 It is often the case that on presenting to a medical practitioner, either GP or specialist, that patients do not have a list of their medications at hand. Many people are not aware of what medications they take regularly, who prescribed them, why or when. This makes it difficult for medical practitioners to alter patient medication. Similiarly it is difficult for the patient to adhere to their treatment plan. People are at a real risk not only of missing vital medication but also of overdosing on medication. 
 
 Read below to find out how the Medication Manager App aims to reduce these risks and increase medication saftey and adherence. 
 
 
-## Mockup <https://balsamiq.cloud/s3pki77/p4agro5>
+## Wireframe <https://balsamiq.cloud/s3pki77/p4agro5>
 
-Click the link to view my mockup for The Med App on balsamiq.
+Click the link to view my wireframe for The Med App on balsamiq.
  
  
 
  
 ## UX
+
+As described above, the Med App is designed for personal or professional use, as an aid to manage medication. Below are some examples of potential user experiences. 
 
 ####Megan: I am a 41yr old woman and personal carer to my elderly mother, Mary, who has severe rheumatoid arthritis. Mary takes over 20 medications per day, with different medications due at different times each day. Her medication list changes frequently as she is in and out of hospital. It is difficult to keep track of her medications from one day to the next. The Med Manager app allows me to create a list of my mother's medications including doseage, administration time and even who the prescriber is. I can add and delete medications as needed and change the doseage. By clicking on the "NOW" link I know which medications Mary is due at any given time so it is less likely that I will give her the wrong medication or miss a dose. The Med Manager app has made taking care of my mother much easier and I feel more confident about managing her medications. 
 
@@ -164,7 +169,7 @@ I followed a materialize tutorial in order to implement the parallax scrolling o
 
 ## Deployment
 
-<https://flask-med-app.herokuapp.com/>
+Find the Med App deployed on heroku [here](https://flask-med-app.herokuapp.com/).
 
 1. I deployed The Med App using the Heroku cloud app platform as follows: 
 
@@ -174,21 +179,25 @@ I followed a materialize tutorial in order to implement the parallax scrolling o
 
 4. I scrolled down to deployment method and clicked the 'github' link. I connected to my github account and chose the Med App repository name. 
 
+5. I clicked on the settings link and entered configuration variables. 
+
 5. I scrolled down to manual deploy and chose 'master' branch to deploy and clicked the 'deploy branch' button. Finally I enabled automatic deploys so that with each Github push, the updated App would be deployed. 
 
 * I used os.getenv(PORT, 8080) as the port and os.getenv(IP, 0.0.0.0) as the host in my scripts. 
 
  
 ### Getting the code up and running
-1. Firstly you will need to clone this repository by running the ```git clone <project's Github URL>``` command
-2. After you've that you'll need to make sure that you have **npm** installed
+1. Firstly you will need to clone this repository by running the ```git clone <git@github.com:caoimhedaly/med_app_trial.git>``` command
+2. After you've that done you'll need to make sure that you have **npm** installed
   1. You can get **npm** by installing Node from [here](https://nodejs.org/en/)
 4. After those dependencies have been installed you'll need to make sure that you have **http-server** installed. You can install this by running the following: ```npm install -g http-server # this also may require sudo on Mac/Linux```
 5. Once **http-server** is installed run ```http-server -c-1```
 6. The project will now run on [localhost](http://127.0.0.1:8080)
-7. Make changes to the code and if you think it belongs in here then just submit a pull request
+7. Make changes to the code and if you think it belongs in here then just submit a pull request.
 
 ## Credits
+
+I would like to thank my tutor Mr Michael Park for help with my code lines 17 to 61 of week.html which consists of multiple for loops within a for loop. 
 
 ### Media
 

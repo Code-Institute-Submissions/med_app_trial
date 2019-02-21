@@ -1,170 +1,178 @@
 {% extends 'base.html' %} {% block content %}
-<div class="container-fluid" >
-    <div class = 'container'>
-    <div class="row">
-        <div class="col s12">
 
-            <h1 id = "add" >Add Medication</h1>
+<div class="container-fluid">
+    <div class='container'>
+
+        <div class="row">
+            <div class="col s12">
+
+                <h1 id="add">Add Medication</h1>
+            </div>
         </div>
-    </div>
-    <div class="row" id="form_row">
 
-        <form method="POST" class="col s12">
+        <div class="row" id="form_row">
 
-
-            <div class="row">
-                <div class="input-field col s12, m6">
-                    <input id="Medication_Name" name="Medication_Name" type="text" class="validate">
-                    <label class='label' for="Medication_Name"><i class="fas fa-pills"></i> &nbsp Medication Name</label>
-                </div>
+            <form method="POST" class="col s12">
 
 
-                <div class="input-field col s12, m6">
-                    <input id="Generic_Name" name="Generic_Name" type="text" class="validate">
-                    <label for="Generic_Name"><i class="fas fa-prescription-bottle"></i>&nbspGeneric Name</label>
-                </div>
-            </div>
+                <div class="row">
+                    <div class="input-field col s12, m6">
+                        <input id="Medication_Name" name="Medication_Name" type="text" class="validate">
+                        <label class='label' for="Medication_Name"><i class="fas fa-pills"></i> &nbsp Medication Name</label>
+                    </div>
 
 
-
-
-
-
-            <div class="row">
-                <div class="input-field col s12, m6">
-                    <input id="Dose" name="Dose" type="text" class="validate">
-                    <label for="Dose"><i class="fas fa-mortar-pestle"></i>&nbspDose</label>
-                </div>
-            </div>
-
-
-            <div class="row">
-                <div class="col s12, m6">
-
-
-                    <h4><b>Weekday</b></h4>
-
-                    <p>
-                        <input type="checkbox" id="id_day_monday" name="Day" value="Monday" />
-                        <label for="id_day_monday">Monday</label>
-
-                    </p>
-                    <p>
-
-                        <input type="checkbox" id="id_day_tuesday" name="Day" value="Tuesday" />
-                        <label for="id_day_tuesday">Tuesday</label>
-
-                    </p>
-                    <p>
-
-                        <input type="checkbox" id="id_day_wednesday" name="Day" value="Wednesday" />
-                        <label for="id_day_wednesday">Wednesday</label>
-
-                    </p>
-                    <p>
-
-                        <input id="id_day_Thursday" name="Day" type="checkbox" value="Thursday" />
-                        <label for="id_day_Thursday">Thursday</label>
-
-                    </p>
-                    <p>
-
-                        <input type="checkbox" id="id-day-Friday" name="Day" value="Friday" />
-                        <label for="id-day-Friday">Friday</label>
-
-                    </p>
-                    <p>
-
-                        <input type="checkbox" id="id_day_Saturday" name="Day" value="Saturday" />
-                        <label for="id_day_Saturday">Saturday</label>
-
-                    </p>
-
-                    <p>
-
-                        <input type="checkbox" id="id_day_Sunday" name="Day" value="Sunday" />
-                        <label for="id_day_Sunday">Sunday</label>
-
-                    </p>
-
-                </div>
-
-
-
-
-                <div class="col s12, m6">
-                    <h4><b>Time</b></h4>
-                    <p>
-
-
-                        <input type="checkbox" id="id_Morning" name="Time" value="Morning" />
-                        <label for="id_Morning">Morning</label>
-
-                    </p>
-                    <p>
-
-                        <input type="checkbox" id="id_Afternoon" name="Time" value="Afternoon" />
-                        <label for="id_Afternoon">Afternoon</label>
-
-                    </p>
-                    <p>
-
-                        <input type="checkbox" id="id_Evening" name="Time" value="Evening" />
-                        <label for="id_Evening">Evening</label>
-
-                    </p>
-
-                    <p>
-
-                        <input id="id_Night" name="Time" type="checkbox" value="Night" />
-                        <label for="id_Night">Night</label>
-
-                    </p>
-
-                </div>
-
-
-            </div>
-
-            <div class="row">
-                <div class="input-field col s12, m6">
-                    <i class="material-icons prefix">today</i>
-                    <input id="Date_prescribed" name="Date_prescribed" type="text" class="datepicker">
-                    <label for="icon_prefix">Date prescribed</label>
-                </div>
-
-
-                <div class="input-field col s12, m6">
-                    <i class="material-icons prefix">today</i>
-                    <input id="Date_discontinued" name="Date_discontinued" type="text" class="datepicker">
-                    <label for="icon_prefix">Discontinue Date</label>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col s12, m6">
-                    <i class="fas fa-briefcase-medical"></i> Doctor:
-                    <div class="input-field inline">
-                        <input id="Physician" name="Physician" type="text" class="validate">
-                        <label for="Physician">&nbsp Physician</label>
-
+                    <div class="input-field col s12, m6">
+                        <input id="Generic_Name" name="Generic_Name" type="text" class="validate">
+                        <label for="Generic_Name"><i class="fas fa-prescription-bottle"></i>&nbspGeneric Name</label>
                     </div>
                 </div>
 
-            </div>
-            <div class="row">
-                <div class="col s12">
 
-                    <button class="btn waves-effect waves-light" type="submit">Add Medication
-                <i class="fas fa-plus"></i>
-             </button>
+
+
+
+
+                <div class="row">
+                    <div class="input-field col s12, m6">
+                        <input id="Dose" name="Dose" type="text" class="validate">
+                        <label for="Dose"><i class="fas fa-mortar-pestle"></i>&nbspDose</label>
+                    </div>
                 </div>
 
 
+                <div class="row">
+                    <div class="col s12, m6">
 
-            </div>
-        </form>
+
+                        <h4><b>Weekday</b></h4>
+
+                        <p>
+                            <input type="checkbox" id="id_day_monday" name="Day" value="Monday" />
+                            <label for="id_day_monday">Monday</label>
+
+                        </p>
+                        <p>
+
+                            <input type="checkbox" id="id_day_tuesday" name="Day" value="Tuesday" />
+                            <label for="id_day_tuesday">Tuesday</label>
+
+                        </p>
+                        <p>
+
+                            <input type="checkbox" id="id_day_wednesday" name="Day" value="Wednesday" />
+                            <label for="id_day_wednesday">Wednesday</label>
+
+                        </p>
+                        <p>
+
+                            <input id="id_day_Thursday" name="Day" type="checkbox" value="Thursday" />
+                            <label for="id_day_Thursday">Thursday</label>
+
+                        </p>
+                        <p>
+
+                            <input type="checkbox" id="id-day-Friday" name="Day" value="Friday" />
+                            <label for="id-day-Friday">Friday</label>
+
+                        </p>
+                        <p>
+
+                            <input type="checkbox" id="id_day_Saturday" name="Day" value="Saturday" />
+                            <label for="id_day_Saturday">Saturday</label>
+
+                        </p>
+
+                        <p>
+
+                            <input type="checkbox" id="id_day_Sunday" name="Day" value="Sunday" />
+                            <label for="id_day_Sunday">Sunday</label>
+
+                        </p>
+
+                    </div>
+
+
+
+
+                    <div class="col s12, m6">
+                        <h4><b>Time</b></h4>
+                        <p>
+
+
+                            <input type="checkbox" id="id_Morning" name="Time" value="Morning" />
+                            <label for="id_Morning">Morning</label>
+
+                        </p>
+                        <p>
+
+                            <input type="checkbox" id="id_Afternoon" name="Time" value="Afternoon" />
+                            <label for="id_Afternoon">Afternoon</label>
+
+                        </p>
+                        <p>
+
+                            <input type="checkbox" id="id_Evening" name="Time" value="Evening" />
+                            <label for="id_Evening">Evening</label>
+
+                        </p>
+
+                        <p>
+
+                            <input id="id_Night" name="Time" type="checkbox" value="Night" />
+                            <label for="id_Night">Night</label>
+
+                        </p>
+
+                    </div>
+
+
+                </div>
+
+                <div class="row">
+                    <div class="input-field col s12, m6">
+                        <i class="material-icons prefix">today</i>
+                        <input id="Date_prescribed" name="Date_prescribed" type="text" class="datepicker">
+                        <label for="icon_prefix">Date prescribed</label>
+                    </div>
+
+
+                    <div class="input-field col s12, m6">
+                        <i class="material-icons prefix">today</i>
+                        <input id="Date_discontinued" name="Date_discontinued" type="text" class="datepicker">
+                        <label for="icon_prefix">Discontinue Date</label>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col s12, m6">
+                        <i class="fas fa-briefcase-medical"></i> Doctor:
+                        <div class="input-field inline">
+                            <input id="Physician" name="Physician" type="text" class="validate">
+                            <label for="Physician">&nbsp Physician</label>
+
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="row">
+                    <div class="col s12">
+
+                        <button class="btn waves-effect waves-light" type="submit">Add Medication
+                <i class="fas fa-plus"></i>
+             </button>
+                    </div>
+
+
+
+                </div>
+
+            </form>
+
+        </div>
+
     </div>
-</div>
 </div>
 
 

@@ -2,8 +2,7 @@
 
 View the Med App at <https://flask-med-app.herokuapp.com/>
 
-Css validated by jigsaw.
-<http://jigsaw.w3.org/css-validator/check/referer>
+
  
 ## Introduction
  
@@ -14,9 +13,9 @@ It is often the case that on presenting to a medical practitioner, either GP or 
 Read below to find out how the Medication Manager App aims to reduce these risks and increase medication saftey and adherence. 
 
 
-## Wireframe <https://balsamiq.cloud/s3pki77/p4agro5>
+## Wireframe 
 
-Click the link to view my wireframe for The Med App on balsamiq.
+Click the link to view my wireframe for The Med App on [balsamiq](https://balsamiq.cloud/s3pki77/p4agro5).
  
  
 
@@ -162,7 +161,8 @@ This page also has a large red button which will bring you to the 'add medicatio
 
 ## Contributing
 
-Validation by W3C Css validator <http://jigsaw.w3.org/css-validator/validator$link>
+Css validated by jigsaw.
+<https://jigsaw.w3.org/css-validator/>
 
 I followed a materialize tutorial in order to implement the parallax scrolling on the home page. <https://www.um.es/docencia/barzana/materializecss/parallax.html>
 
@@ -185,15 +185,7 @@ Find the Med App deployed on heroku [here](https://flask-med-app.herokuapp.com/)
 
 * I used os.getenv(PORT, 8080) as the port and os.getenv(IP, 0.0.0.0) as the host in my scripts. 
 
- 
-### Getting the code up and running
-1. Firstly you will need to clone this repository by running the ```git clone <git@github.com:caoimhedaly/med_app_trial.git>``` command
-2. After you've that done you'll need to make sure that you have **npm** installed
-  1. You can get **npm** by installing Node from [here](https://nodejs.org/en/)
-4. After those dependencies have been installed you'll need to make sure that you have **http-server** installed. You can install this by running the following: ```npm install -g http-server # this also may require sudo on Mac/Linux```
-5. Once **http-server** is installed run ```http-server -c-1```
-6. The project will now run on [localhost](http://127.0.0.1:8080)
-7. Make changes to the code and if you think it belongs in here then just submit a pull request.
+
 
 ## Credits
 

@@ -153,12 +153,6 @@ label {
 
 }
 
-@media only screen and (max-width: 540px) {
-
-    .container2 {
-        background-color: grey;
-    }
-}
 
 .text {
     font-weight: bolder;

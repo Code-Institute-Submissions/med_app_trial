@@ -1,6 +1,6 @@
 # Medication Manager App
 
-View the Med App at <https://flask-med-app.herokuapp.com/>
+View the Med App [here](https://flask-med-app.herokuapp.com/).
 
 
  
@@ -161,10 +161,9 @@ This page also has a large red button which will bring you to the 'add medicatio
 
 ## Contributing
 
-Css validated by jigsaw.
-<https://jigsaw.w3.org/css-validator/>
+Css validated by [jigsaw](https://jigsaw.w3.org/css-validator/)
 
-I followed a materialize tutorial in order to implement the parallax scrolling on the home page. <https://www.um.es/docencia/barzana/materializecss/parallax.html>
+I followed a [materialize tutorial](https://www.um.es/docencia/barzana/materializecss/parallax.html) in order to implement the parallax scrolling on the home page. 
 
 
 ## Deployment

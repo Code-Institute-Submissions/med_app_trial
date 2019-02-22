@@ -193,5 +193,21 @@ h1{
     text-align: center;
     padding-top: 20px;
     padding-bottom: 20px;
+    position: fixed;
+   left: 0;
+   bottom: 0;
+   width: 100%;
+  
+   
 }
 
+.footer-c{
+      background-color: white;
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.waves-effect{
+    margin-bottom: 50px;
+}

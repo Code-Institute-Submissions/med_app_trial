@@ -1,6 +1,7 @@
 # Medication Manager App
 
 View the Med App [here](https://flask-med-app.herokuapp.com/target="_blank" ).
+<a href="https://flask-med-app.herokuapp.com/" target="_blank">here</a>
 
 
  
